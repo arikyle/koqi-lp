@@ -3,6 +3,21 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
+function ArchitecturalTexture() {
+  return (
+    <svg className="pointer-events-none absolute inset-0 h-full w-full opacity-[0.08]" aria-hidden="true">
+      <filter id="brokerage-texture">
+        <feTurbulence type="fractalNoise" baseFrequency="0.015" numOctaves="5" seed="3" />
+        <feColorMatrix type="saturate" values="0" />
+        <feComponentTransfer>
+          <feFuncA type="linear" slope="0.6" />
+        </feComponentTransfer>
+      </filter>
+      <rect width="100%" height="100%" filter="url(#brokerage-texture)" />
+    </svg>
+  );
+}
+
 export function Brokerage() {
   const sectionRef = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({
@@ -17,12 +32,16 @@ export function Brokerage() {
       ref={sectionRef}
       className="relative flex h-screen items-center justify-center overflow-hidden"
     >
-      {/* Background — parallax at 0.3x scroll speed */}
       <motion.div
-        className="absolute inset-[-15%] bg-stone-800"
-        style={{ y: bgY }}
+        className="absolute inset-[-15%]"
+        style={{
+          y: bgY,
+          background: "linear-gradient(165deg, #2d2926 0%, #1a1a1a 35%, #252220 65%, #1f1d1b 100%)",
+        }}
       />
-      <div className="absolute inset-0 bg-stone-bg/70" />
+      <ArchitecturalTexture />
+      <div className="absolute inset-0 bg-stone-bg/65" />
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-stone-300/30" />
 
       <motion.div
         initial={{ opacity: 0, y: 24 }}
@@ -37,7 +56,7 @@ export function Brokerage() {
           They&apos;re looking for a brokerage that can prove it.
         </h2>
 
-        <div className="mt-10 space-y-4 text-lg leading-relaxed text-ink">
+        <div className="mt-10 space-y-4 text-lg leading-relaxed text-ink/80">
           <p>
             Koqi gives brokerages real visibility into agent performance — not
             just who&apos;s busy, but who&apos;s actually good.
@@ -48,7 +67,7 @@ export function Brokerage() {
             Build a recruiting pitch backed by data your competitors can&apos;t
             match.
           </p>
-          <p className="pt-4">
+          <p className="pt-4 text-ink">
             The brokerages that measure what matters will be the ones that keep
             the agents who do.
           </p>

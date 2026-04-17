@@ -23,48 +23,114 @@ const features = [
   },
 ];
 
-const heatmapIntensities = [
-  0.7, 0.3, 0.9, 0.15, 0.5, 0.3, 0.9, 0.5, 0.7, 0.15,
-  0.5, 0.15, 0.7, 0.3, 0.9, 0.9, 0.5, 0.15, 0.7, 0.3,
-  0.15, 0.7, 0.3, 0.5, 0.9,
-];
+function ACCSCardVisual() {
+  const scores = [
+    { label: "Pricing Accuracy", value: 92, color: "#2A9D8F" },
+    { label: "Confidence", value: 84, color: "#2A9D8F" },
+    { label: "Local Expertise", value: 88, color: "#2A9D8F" },
+    { label: "Consistency", value: 79, color: "#2A9D8F" },
+  ];
 
-function ACCSPlaceholder() {
   return (
-    <div className="flex h-full flex-col items-center justify-center gap-6">
-      <div className="flex h-48 w-48 items-center justify-center rounded-full border-4 border-accent">
-        <span className="font-display text-6xl text-ink">87</span>
-      </div>
-      <div className="space-y-2 text-center">
-        <p className="text-sm font-medium text-ink">ACCS Score</p>
-        <div className="flex gap-4 text-xs text-muted">
-          <span>Pricing 92</span>
-          <span>Confidence 84</span>
-          <span>Local 88</span>
+    <div className="flex h-full items-center justify-center p-6">
+      <div className="w-full max-w-sm">
+        <div className="rounded-2xl border border-stone-200/80 bg-white p-6 shadow-sm">
+          <div className="flex items-start justify-between">
+            <div>
+              <p className="text-[11px] font-medium uppercase tracking-[0.12em] text-muted">Your Score</p>
+              <div className="mt-1 flex items-baseline gap-2">
+                <span className="font-display text-[52px] leading-none text-ink">87</span>
+                <span className="rounded-full bg-accent/10 px-2 py-0.5 text-[11px] font-medium text-accent">+3 this month</span>
+              </div>
+            </div>
+            <div className="flex h-14 w-14 items-center justify-center">
+              <svg width="56" height="56" className="-rotate-90">
+                <circle cx="28" cy="28" r="24" fill="none" stroke="#E7E5E4" strokeWidth="3" />
+                <circle cx="28" cy="28" r="24" fill="none" stroke="#2A9D8F" strokeWidth="3"
+                  strokeDasharray={2 * Math.PI * 24}
+                  strokeDashoffset={2 * Math.PI * 24 * (1 - 0.87)}
+                  strokeLinecap="round" />
+              </svg>
+            </div>
+          </div>
+
+          <div className="mt-6 space-y-3">
+            {scores.map((s) => (
+              <div key={s.label}>
+                <div className="flex justify-between text-[12px]">
+                  <span className="text-muted">{s.label}</span>
+                  <span className="font-medium text-ink">{s.value}</span>
+                </div>
+                <div className="mt-1 h-1.5 w-full overflow-hidden rounded-full bg-stone-100">
+                  <div
+                    className="h-full rounded-full"
+                    style={{ width: `${s.value}%`, backgroundColor: s.color }}
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-5 flex items-center gap-2 border-t border-stone-100 pt-4">
+            <div className="h-1.5 w-1.5 rounded-full bg-accent" />
+            <p className="text-[11px] text-muted">Updated 2 hours ago</p>
+          </div>
         </div>
       </div>
     </div>
   );
 }
 
-function EstimatePlaceholder() {
+function EstimateVisual() {
   return (
-    <div className="flex h-full flex-col items-center justify-center gap-4 px-8">
-      <div className="w-full max-w-sm rounded-xl border border-stone-200 bg-white p-6">
-        <p className="text-xs text-muted">123 Palm Avenue, Miami FL</p>
-        <p className="mt-1 text-sm text-ink">3 bed · 2 bath · 1,840 sqft</p>
-        <div className="mt-4 flex items-center gap-3">
-          <div className="h-10 flex-1 rounded-lg border border-stone-200 px-3 flex items-center">
-            <span className="text-sm text-muted">$685,000</span>
-          </div>
-          <div className="rounded-lg bg-accent px-4 py-2.5 text-sm text-white">
-            Submit
-          </div>
-        </div>
-        <div className="mt-3">
-          <p className="text-xs text-muted">Confidence</p>
-          <div className="mt-1 h-2 w-full rounded-full bg-stone-100">
-            <div className="h-2 w-3/4 rounded-full bg-accent" />
+    <div className="flex h-full items-center justify-center p-6">
+      <div className="w-full max-w-sm">
+        <div className="overflow-hidden rounded-2xl border border-stone-200/80 bg-white shadow-sm">
+          <div className="h-24 bg-gradient-to-br from-stone-200 via-stone-100 to-stone-200" />
+          <div className="p-5">
+            <div className="flex items-start gap-3">
+              <div className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-accent/10">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                  <path d="M7 1L7 13M7 1L3 5M7 1L11 5" stroke="#2A9D8F" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" transform="rotate(180 7 7)" />
+                  <circle cx="7" cy="13" r="1" fill="#2A9D8F" />
+                </svg>
+              </div>
+              <div>
+                <p className="text-sm font-medium text-ink">123 Palm Avenue</p>
+                <p className="text-[12px] text-muted">Miami, FL 33139 &middot; 3bd &middot; 2ba &middot; 1,840 sqft</p>
+              </div>
+            </div>
+
+            <div className="mt-4">
+              <label className="text-[11px] font-medium uppercase tracking-[0.1em] text-muted">Your Estimate</label>
+              <div className="mt-1.5 flex items-center gap-2">
+                <div className="flex h-10 flex-1 items-center rounded-lg border border-stone-200 bg-stone-50 px-3">
+                  <span className="text-sm text-muted">$</span>
+                  <span className="ml-0.5 text-sm font-medium text-ink">685,000</span>
+                </div>
+                <button className="h-10 rounded-lg bg-accent px-5 text-sm font-medium text-white">
+                  Submit
+                </button>
+              </div>
+            </div>
+
+            <div className="mt-3">
+              <div className="flex justify-between text-[11px]">
+                <span className="text-muted">Confidence</span>
+                <span className="font-medium text-ink">High</span>
+              </div>
+              <div className="mt-1.5 flex gap-1">
+                {[1, 2, 3, 4, 5].map((n) => (
+                  <div key={n} className={`h-1 flex-1 rounded-full ${n <= 4 ? "bg-accent" : "bg-stone-100"}`} />
+                ))}
+              </div>
+            </div>
+
+            <div className="mt-4 rounded-lg bg-accent/5 px-3 py-2">
+              <p className="text-[11px] text-accent">
+                <span className="font-medium">+12 ACCS points</span> earned from your last estimate
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -72,23 +138,68 @@ function EstimatePlaceholder() {
   );
 }
 
-function TerritoryPlaceholder() {
+function TerritoryVisual() {
+  const zips = [
+    { code: "33139", name: "South Beach", score: 94 },
+    { code: "33140", name: "Mid-Beach", score: 88 },
+    { code: "33141", name: "Bal Harbour", score: 72 },
+    { code: "33154", name: "Bay Harbor", score: 45 },
+    { code: "33137", name: "Wynwood", score: 81 },
+    { code: "33132", name: "Downtown", score: 67 },
+  ];
+
   return (
-    <div className="flex h-full items-center justify-center px-8">
-      <div className="grid w-full max-w-sm grid-cols-5 gap-1.5">
-        {heatmapIntensities.map((intensity, i) => (
-          <div
-            key={i}
-            className="aspect-square rounded-sm"
-            style={{ backgroundColor: `rgba(42, 157, 143, ${intensity})` }}
-          />
-        ))}
+    <div className="flex h-full items-center justify-center p-6">
+      <div className="w-full max-w-sm">
+        <div className="rounded-2xl border border-stone-200/80 bg-white p-5 shadow-sm">
+          <div className="flex items-center justify-between">
+            <p className="text-[11px] font-medium uppercase tracking-[0.12em] text-muted">Territory Strength</p>
+            <p className="text-[11px] text-muted">Miami-Dade</p>
+          </div>
+
+          <div className="mt-4 space-y-2">
+            {zips.map((zip) => (
+              <div key={zip.code} className="flex items-center gap-3">
+                <span className="w-12 text-[11px] font-mono text-muted">{zip.code}</span>
+                <div className="flex-1">
+                  <div className="flex justify-between text-[12px]">
+                    <span className="text-ink">{zip.name}</span>
+                    <span className="font-medium text-ink">{zip.score}</span>
+                  </div>
+                  <div className="mt-1 h-1.5 w-full overflow-hidden rounded-full bg-stone-100">
+                    <div
+                      className="h-full rounded-full transition-all"
+                      style={{
+                        width: `${zip.score}%`,
+                        backgroundColor: zip.score > 80 ? "#2A9D8F" : zip.score > 60 ? "#2A9D8F99" : "#2A9D8F44",
+                      }}
+                    />
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-4 flex items-center justify-between border-t border-stone-100 pt-3">
+            <div className="flex items-center gap-3 text-[10px] text-muted">
+              <span className="flex items-center gap-1">
+                <span className="inline-block h-2 w-2 rounded-full bg-accent" />Strong
+              </span>
+              <span className="flex items-center gap-1">
+                <span className="inline-block h-2 w-2 rounded-full bg-accent/60" />Growing
+              </span>
+              <span className="flex items-center gap-1">
+                <span className="inline-block h-2 w-2 rounded-full bg-accent/25" />Opportunity
+              </span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
 }
 
-const visuals = [ACCSPlaceholder, EstimatePlaceholder, TerritoryPlaceholder];
+const visuals = [ACCSCardVisual, EstimateVisual, TerritoryVisual];
 
 function MobileFeatures() {
   return (
@@ -112,7 +223,7 @@ function MobileFeatures() {
                 <p className="mt-3 text-lg leading-relaxed text-muted">
                   {feature.body}
                 </p>
-                <div className="mt-8 h-[300px] rounded-2xl border border-stone-200 bg-white/50">
+                <div className="mt-8 min-h-[360px]">
                   <Visual />
                 </div>
               </div>
@@ -171,7 +282,7 @@ function DesktopFeatures() {
                 </span>
               </p>
 
-              <div className="relative">
+              <div className="relative min-h-[100px]">
                 {features.map((feature, i) => (
                   <div
                     key={i}
@@ -209,7 +320,7 @@ function DesktopFeatures() {
             </div>
 
             <div className="flex flex-1 items-center justify-center">
-              <div className="h-[400px] w-full rounded-2xl border border-stone-200 bg-white/50 transition-all duration-500">
+              <div className="w-full transition-all duration-500">
                 <ActiveVisual />
               </div>
             </div>

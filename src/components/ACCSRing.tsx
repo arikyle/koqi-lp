@@ -18,12 +18,14 @@ export function ACCSRing({ score = 87, size: sizeProp = 400 }: ACCSRingProps) {
     window.addEventListener("resize", updateSize);
     return () => window.removeEventListener("resize", updateSize);
   }, [sizeProp]);
+
   const [hasAnimated, setHasAnimated] = useState(false);
   const [progress, setProgress] = useState(0);
   const ref = useRef<HTMLDivElement>(null);
 
   const strokeWidth = 4;
-  const radius = (size - strokeWidth) / 2;
+  const glowWidth = 12;
+  const radius = (size - glowWidth) / 2;
   const circumference = 2 * Math.PI * radius;
 
   useEffect(() => {
@@ -68,6 +70,16 @@ export function ACCSRing({ score = 87, size: sizeProp = 400 }: ACCSRingProps) {
   return (
     <div ref={ref} className="relative" style={{ width: size, height: size }}>
       <svg width={size} height={size} className="-rotate-90">
+        <defs>
+          <filter id="accs-glow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur" />
+            <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.165  0 0 0 0 0.616  0 0 0 0 0.561  0 0 0 0.4 0" />
+            <feMerge>
+              <feMergeNode />
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
+          </filter>
+        </defs>
         <circle
           cx={size / 2}
           cy={size / 2}
@@ -86,12 +98,14 @@ export function ACCSRing({ score = 87, size: sizeProp = 400 }: ACCSRingProps) {
           strokeDasharray={circumference}
           strokeDashoffset={offset}
           strokeLinecap="round"
+          filter="url(#accs-glow)"
         />
       </svg>
-      <div className="absolute inset-0 flex items-center justify-center">
-        <span className="font-display leading-none text-ink" style={{ fontSize: size * 0.3 }}>
+      <div className="absolute inset-0 flex flex-col items-center justify-center gap-1">
+        <span className="font-display leading-none text-ink" style={{ fontSize: size * 0.28 }}>
           {Math.round(progress)}
         </span>
+        <span className="text-xs font-medium uppercase tracking-[0.15em] text-muted">ACCS</span>
       </div>
     </div>
   );

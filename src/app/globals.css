@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+@property --hero-angle {
+  syntax: '<angle>';
+  initial-value: 215deg;
+  inherits: false;
+}
+
 :root {
   --color-stone-bg: #F7F5F1;
   --color-ink: #1A1A1A;
@@ -21,6 +27,23 @@ body {
   background: var(--color-stone-bg);
   color: var(--color-ink);
   font-family: var(--font-body), system-ui, sans-serif;
+}
+
+.hero-gradient {
+  background: conic-gradient(
+    from var(--hero-angle) at 30% 70%,
+    #1a1a1a 0deg,
+    #2d2926 60deg,
+    #1f1d1b 120deg,
+    #252220 200deg,
+    #1a1a1a 280deg,
+    #2a2624 360deg
+  );
+  animation: hero-rotate 40s linear infinite;
+}
+
+@keyframes hero-rotate {
+  to { --hero-angle: 575deg; }
 }
 
 html.lenis,
