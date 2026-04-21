@@ -43,6 +43,7 @@ next-env.d.ts
 # screenshots & playwright
 *.png
 !public/Dashboard.png
+!public/media/*.png
 *.jpeg
 !public/media/*.jpeg
 !public/media/*.jpg
