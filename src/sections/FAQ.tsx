@@ -11,17 +11,12 @@ const faqs = [
   {
     question: "How is ACCS calculated?",
     answer:
-      "ACCS combines five dimensions: pricing accuracy (40%), confidence calibration (25%), local specialization (15%), property type expertise (15%), and engagement (5%). Scores decay with inactivity, so your number always reflects your current form.",
+      "ACCS combines five dimensions: pricing accuracy, confidence calibration, local specialization, property type expertise, and engagement. Scores decay with inactivity, so your number always reflects your current form.",
   },
   {
     question: "What does Estimate-to-Earn mean?",
     answer:
       "You submit pricing estimates on real properties in your market. The closer your estimate to the final sale price, the more you earn. It's deliberate practice with real stakes — a pricing gym for agents who want to stay sharp.",
-  },
-  {
-    question: "Is this crypto?",
-    answer:
-      "Koqi uses modern infrastructure to verify credentials and issue rewards, but you'll never see any of it. No wallets to manage. No fees. No jargon. You use Koqi like any other platform you already trust.",
   },
   {
     question: "What does it cost?",

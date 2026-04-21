@@ -6,6 +6,7 @@ import { ProductGlimpse } from "@/sections/ProductGlimpse";
 import { Rewards } from "@/sections/Rewards";
 import { Brokerage } from "@/sections/Brokerage";
 import { Proof } from "@/sections/Proof";
+import { MobileShowcase } from "@/sections/MobileShowcase";
 import { FAQ } from "@/sections/FAQ";
 import { FinalCTA } from "@/sections/FinalCTA";
 
@@ -27,6 +28,7 @@ export default function Home() {
         <Rewards />
         <Brokerage />
         <Proof />
+        <MobileShowcase />
         <FAQ />
         <FinalCTA />
       </main>
