@@ -42,5 +42,11 @@ next-env.d.ts
 
 # screenshots & playwright
 *.png
+!public/Dashboard.png
 *.jpeg
+!public/media/*.jpeg
+!public/media/*.jpg
 .playwright-mcp/
+
+# raw media source files
+public/Koqi Media/

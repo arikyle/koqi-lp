@@ -6,15 +6,22 @@ export function FinalCTA() {
   return (
     <>
       <section
-        className="flex flex-col items-center justify-center bg-stone-bg px-6"
+        className="relative flex flex-col items-center justify-center overflow-hidden px-6"
         style={{ minHeight: "80vh" }}
       >
+        <img
+          src="/media/property-twilight.jpg"
+          alt=""
+          className="absolute inset-0 h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/50" />
+
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-10%" }}
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-          className="text-center font-display text-[32px] leading-snug text-ink sm:text-5xl md:text-[64px] md:leading-tight"
+          className="relative text-center font-display text-[32px] leading-snug text-white sm:text-5xl md:text-[64px] md:leading-tight"
         >
           You already know if you&apos;re good.
           <br />
@@ -30,7 +37,7 @@ export function FinalCTA() {
             delay: 0.2,
             ease: [0.22, 1, 0.36, 1],
           }}
-          className="mt-12 flex flex-col items-center"
+          className="relative mt-12 flex flex-col items-center"
         >
           <a
             href="#"
@@ -39,7 +46,7 @@ export function FinalCTA() {
             Get Early Access
           </a>
 
-          <p className="mt-6 text-sm text-muted">
+          <p className="mt-6 text-sm text-white/60">
             Free during beta. Your score starts building on day one.
           </p>
         </motion.div>

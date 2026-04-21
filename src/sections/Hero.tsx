@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { ScrollCue } from "@/components/ScrollCue";
 
@@ -7,7 +8,7 @@ const headlineEase = [0.22, 1, 0.36, 1] as const;
 
 const headlines = [
   { text: "The agents who close more", className: "text-[32px] sm:text-5xl md:text-7xl" },
-  { text: "don\u2019t work harder.", className: "text-[28px] sm:text-[42px] md:text-[64px]" },
+  { text: "don’t work harder.", className: "text-[28px] sm:text-[42px] md:text-[64px]" },
   { text: "They see more.", className: "text-[28px] sm:text-[42px] md:text-[64px]" },
 ];
 
@@ -24,9 +25,29 @@ function FilmGrain() {
 }
 
 export function Hero() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
+    if (mq.matches && videoRef.current) {
+      videoRef.current.pause();
+    }
+  }, []);
+
   return (
     <section className="relative flex h-screen w-full items-end overflow-hidden">
-      <div className="hero-gradient absolute inset-0" />
+      <video
+        ref={videoRef}
+        autoPlay
+        muted
+        loop
+        playsInline
+        poster="/media/hero-poster.jpg"
+        className="absolute inset-0 h-full w-full object-cover"
+      >
+        <source src="/media/hero.mp4" type="video/mp4" />
+      </video>
+
       <FilmGrain />
 
       <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent" />

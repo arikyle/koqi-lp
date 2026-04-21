@@ -14,7 +14,7 @@ export default function Home() {
     <>
       <a
         href="#main"
-        className="absolute left-4 top-4 z-[100] rounded-full bg-accent px-6 py-3 text-sm font-medium text-white -translate-y-full focus:translate-y-0"
+        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-accent focus:px-6 focus:py-3 focus:text-sm focus:font-medium focus:text-white"
       >
         Skip to content
       </a>

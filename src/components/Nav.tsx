@@ -22,9 +22,13 @@ export function Nav() {
           : "bg-transparent"
       }`}
     >
-      <span className="text-2xl font-display tracking-tight text-accent">
-        Koqi
-      </span>
+      <img
+        src="/Koqi-BW.svg"
+        alt="Koqi"
+        className={`h-16 w-auto transition-all duration-300 ${
+          scrolled ? "" : "invert"
+        }`}
+      />
 
       <div className="flex items-center gap-6">
         <a

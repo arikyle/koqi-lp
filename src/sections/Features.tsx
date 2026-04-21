@@ -86,7 +86,13 @@ function EstimateVisual() {
     <div className="flex h-full items-center justify-center p-6">
       <div className="w-full max-w-sm">
         <div className="overflow-hidden rounded-2xl border border-stone-200/80 bg-white shadow-sm">
-          <div className="h-24 bg-gradient-to-br from-stone-200 via-stone-100 to-stone-200" />
+          <div className="relative h-24 overflow-hidden">
+            <img
+              src="/media/property-exterior.jpg"
+              alt=""
+              className="h-full w-full object-cover"
+            />
+          </div>
           <div className="p-5">
             <div className="flex items-start gap-3">
               <div className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-accent/10">
@@ -96,8 +102,8 @@ function EstimateVisual() {
                 </svg>
               </div>
               <div>
-                <p className="text-sm font-medium text-ink">123 Palm Avenue</p>
-                <p className="text-[12px] text-muted">Miami, FL 33139 &middot; 3bd &middot; 2ba &middot; 1,840 sqft</p>
+                <p className="text-sm font-medium text-ink">1240 Hilldale Ave</p>
+                <p className="text-[12px] text-muted">Los Angeles, CA 90069 &middot; 4bd &middot; 3ba &middot; 2,680 sqft</p>
               </div>
             </div>
 
@@ -106,7 +112,7 @@ function EstimateVisual() {
               <div className="mt-1.5 flex items-center gap-2">
                 <div className="flex h-10 flex-1 items-center rounded-lg border border-stone-200 bg-stone-50 px-3">
                   <span className="text-sm text-muted">$</span>
-                  <span className="ml-0.5 text-sm font-medium text-ink">685,000</span>
+                  <span className="ml-0.5 text-sm font-medium text-ink">2,850,000</span>
                 </div>
                 <button className="h-10 rounded-lg bg-accent px-5 text-sm font-medium text-white">
                   Submit
@@ -140,12 +146,12 @@ function EstimateVisual() {
 
 function TerritoryVisual() {
   const zips = [
-    { code: "33139", name: "South Beach", score: 94 },
-    { code: "33140", name: "Mid-Beach", score: 88 },
-    { code: "33141", name: "Bal Harbour", score: 72 },
-    { code: "33154", name: "Bay Harbor", score: 45 },
-    { code: "33137", name: "Wynwood", score: 81 },
-    { code: "33132", name: "Downtown", score: 67 },
+    { code: "90069", name: "West Hollywood", score: 94 },
+    { code: "90046", name: "Hollywood Hills", score: 88 },
+    { code: "90210", name: "Beverly Hills", score: 72 },
+    { code: "90049", name: "Brentwood", score: 45 },
+    { code: "90291", name: "Venice", score: 81 },
+    { code: "90024", name: "Westwood", score: 67 },
   ];
 
   return (
@@ -154,7 +160,7 @@ function TerritoryVisual() {
         <div className="rounded-2xl border border-stone-200/80 bg-white p-5 shadow-sm">
           <div className="flex items-center justify-between">
             <p className="text-[11px] font-medium uppercase tracking-[0.12em] text-muted">Territory Strength</p>
-            <p className="text-[11px] text-muted">Miami-Dade</p>
+            <p className="text-[11px] text-muted">Los Angeles</p>
           </div>
 
           <div className="mt-4 space-y-2">
