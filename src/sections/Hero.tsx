@@ -110,7 +110,7 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 1.1, ease: headlineEase }}
           className="mt-2"
         >
-          <MagneticButton href="#" strength={0.25}>
+          <MagneticButton href="https://form.typeform.com/to/d7BbovyW" strength={0.25}>
             <span className="inline-block rounded-full bg-accent px-8 py-3.5 text-base font-medium text-white transition-all duration-300 hover:shadow-[0_0_32px_rgba(42,157,143,0.4)]">
               Get Early Access
             </span>

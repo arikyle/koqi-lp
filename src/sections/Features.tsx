@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { IPhoneFrame } from "@/components/IPhoneFrame";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -12,36 +13,20 @@ const features = [
   {
     title: "Your performance, quantified",
     body: "ACCS measures what matters: pricing accuracy, local expertise, confidence calibration, and consistency. One number. Always current. Impossible to game.",
-    image: "/media/accs-breakdown.png",
-    alt: "ACCS Performance breakdown showing score dimensions",
+    screen: { src: "/media/screen-accs-performance.png", alt: "ACCS Performance breakdown by category" },
   },
   {
-    title: "Get paid to sharpen your instincts",
+    title: "Get rewarded for sharpening your instincts",
     body: "Submit GPS-verified pricing estimates on real properties in your market. The closer you are to reality, the more you earn. This isn’t a quiz. It’s a pricing gym.",
-    image: "/media/property-detail.png",
-    alt: "Property detail page with RealiWorth AI valuation",
+    screen: { src: "/media/screen-estimate-form.png", alt: "GPS-verified property estimate submission" },
   },
   {
     title: "Know your market before your market knows you",
     body: "See where you dominate. See where you’re invisible. ZIP-level performance data turns guesswork into strategy.",
-    image: "/media/properties-map.png",
-    alt: "Properties map view showing LA market coverage",
+    screen: { src: "/media/screen-property-map.png", alt: "Property map with ZIP-level accuracy data" },
   },
 ];
 
-function ScreenshotVisual({ src, alt }: { src: string; alt: string }) {
-  return (
-    <div className="flex h-full items-center justify-center p-4">
-      <div className="w-full overflow-hidden rounded-2xl border border-white/10 bg-white shadow-2xl shadow-black/40">
-        <img
-          src={src}
-          alt={alt}
-          className="h-full w-full object-cover object-top"
-        />
-      </div>
-    </div>
-  );
-}
 
 function MobileFeatures() {
   return (
@@ -63,8 +48,8 @@ function MobileFeatures() {
               <p className="mt-3 text-lg leading-relaxed text-white/60">
                 {feature.body}
               </p>
-              <div className="mt-8">
-                <ScreenshotVisual src={feature.image} alt={feature.alt} />
+              <div className="mt-8 flex justify-center">
+                <IPhoneFrame screens={[feature.screen]} />
               </div>
             </div>
           ))}
@@ -156,7 +141,12 @@ function DesktopFeatures() {
               </div>
             </div>
 
-            <div className="relative flex-1">
+            <div className="relative flex flex-1 items-center justify-center">
+              <div
+                className="pointer-events-none absolute left-1/2 top-1/2 h-[400px] w-[300px] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-15 blur-[60px]"
+                style={{ background: "radial-gradient(ellipse, #2A9D8F 0%, transparent 70%)" }}
+                aria-hidden="true"
+              />
               {features.map((feature, i) => (
                 <div
                   key={i}
@@ -172,7 +162,9 @@ function DesktopFeatures() {
                     pointerEvents: activeIndex === i ? "auto" : "none",
                   }}
                 >
-                  <ScreenshotVisual src={feature.image} alt={feature.alt} />
+                  <div className="flex items-center justify-center">
+                    <IPhoneFrame screens={[feature.screen]} />
+                  </div>
                 </div>
               ))}
             </div>

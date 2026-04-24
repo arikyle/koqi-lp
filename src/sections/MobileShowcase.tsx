@@ -113,8 +113,6 @@ function PhoneGlow() {
 export function MobileShowcase() {
   const sectionRef = useRef<HTMLElement>(null);
   const phonesRef = useRef<HTMLDivElement>(null);
-  const triggersRef = useRef<ScrollTrigger[]>([]);
-
   useEffect(() => {
     if (!phonesRef.current) return;
     const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -125,43 +123,42 @@ export function MobileShowcase() {
 
     gsap.set(container, { perspective: 1200 });
 
-    phones.forEach((phone, i) => {
-      const fanAngle = (i - 1) * 18;
-      gsap.set(phone, {
-        y: 160,
-        x: 0,
-        opacity: 0,
-        rotateZ: fanAngle,
-        rotateX: 15,
-        scale: 0.85,
-        transformOrigin: "50% 120%",
-      });
-
-      const trigger = ScrollTrigger.create({
+    const tl = gsap.timeline({
+      scrollTrigger: {
         trigger: container,
-        start: "top 80%",
-        once: true,
-        onEnter: () => {
-          gsap.to(phone, {
-            y: 0,
-            x: 0,
-            opacity: 1,
-            rotateZ: 0,
-            rotateX: 0,
-            scale: 1,
-            duration: 1.4,
-            delay: 0.1 + i * 0.12,
-            ease: "power3.out",
-          });
-        },
+        start: "top 88%",
+        end: "top 28%",
+        scrub: 1.5,
+      },
+    });
+
+    phones.forEach((phone, i) => {
+      const centerOffset = Math.abs(i - 1);
+      const startY = 220 - centerOffset * 50;
+
+      gsap.set(phone, {
+        y: startY,
+        rotateX: 22,
+        rotateY: (i - 1) * -6,
+        scale: 0.82,
+        opacity: 0,
+        transformOrigin: "50% 100%",
       });
 
-      triggersRef.current.push(trigger);
+      const offset = i * 0.18;
+
+      tl.to(phone, { opacity: 1, duration: 0.25 }, offset);
+      tl.to(phone, {
+        y: 0,
+        rotateX: 0,
+        rotateY: 0,
+        scale: 1,
+        duration: 0.5,
+      }, offset);
     });
 
     return () => {
-      triggersRef.current.forEach((t) => t.kill());
-      triggersRef.current = [];
+      tl.kill();
     };
   }, []);
 

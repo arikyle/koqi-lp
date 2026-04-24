@@ -17,7 +17,7 @@ const faqs = [
   {
     question: "How does Estimate-to-Earn work?",
     answer:
-      "You submit GPS-verified pricing estimates on real properties listed in your market. After the property sells, Koqi compares your estimate to the final sale price. The closer you are, the more you earn. It's deliberate practice with real stakes — a pricing gym that pays you to get sharper.",
+      "You submit GPS-verified pricing estimates on real properties listed in your market. After the property sells, Koqi compares your estimate to the final sale price. The closer you are, the more you earn. It's deliberate practice with real stakes — a pricing gym that rewards you for getting sharper.",
   },
   {
     question: "Is Koqi free to use?",

@@ -14,8 +14,6 @@ export function Brokerage() {
   const sectionRef = useRef<HTMLElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
   const phonesRef = useRef<HTMLDivElement>(null);
-  const triggersRef = useRef<ScrollTrigger[]>([]);
-
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ["start end", "end start"],
@@ -35,41 +33,43 @@ export function Brokerage() {
 
     gsap.set(phonesRef.current, { perspective: 1000 });
 
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: phonesRef.current,
+        start: "top 85%",
+        end: "top 30%",
+        scrub: 1.2,
+      },
+    });
+
     phones.forEach((phone, i) => {
       const direction = i === 0 ? -1 : 1;
+
       gsap.set(phone, {
-        y: 100,
-        x: direction * 40,
+        y: 180,
+        x: direction * 50,
         opacity: 0,
-        rotateY: direction * 10,
-        scale: 0.9,
+        rotateY: direction * 12,
+        rotateX: 15,
+        scale: 0.85,
         transformOrigin: i === 0 ? "100% 100%" : "0% 100%",
       });
 
-      const trigger = ScrollTrigger.create({
-        trigger: phonesRef.current!,
-        start: "top 75%",
-        once: true,
-        onEnter: () => {
-          gsap.to(phone, {
-            y: 0,
-            x: 0,
-            opacity: 1,
-            rotateY: 0,
-            scale: 1,
-            duration: 1.1,
-            delay: 0.15 + i * 0.2,
-            ease: "power3.out",
-          });
-        },
-      });
+      const offset = i * 0.25;
 
-      triggersRef.current.push(trigger);
+      tl.to(phone, { opacity: 1, duration: 0.3 }, offset);
+      tl.to(phone, {
+        y: 0,
+        x: 0,
+        rotateY: 0,
+        rotateX: 0,
+        scale: 1,
+        duration: 0.5,
+      }, offset);
     });
 
     return () => {
-      triggersRef.current.forEach((t) => t.kill());
-      triggersRef.current = [];
+      tl.kill();
     };
   }, []);
 
@@ -131,7 +131,7 @@ export function Brokerage() {
 
           <div className="mt-10">
             <a
-              href="#"
+              href="https://form.typeform.com/to/d7BbovyW"
               className="inline-block rounded-full border-2 border-white/80 px-8 py-3.5 text-base font-medium text-white transition-colors hover:bg-white hover:text-ink"
             >
               Request a Brokerage Demo

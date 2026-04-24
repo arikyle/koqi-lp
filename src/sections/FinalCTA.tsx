@@ -54,7 +54,7 @@ export function FinalCTA() {
           }}
           className="relative mt-12 flex flex-col items-center"
         >
-          <MagneticButton href="#" strength={0.3}>
+          <MagneticButton href="https://form.typeform.com/to/d7BbovyW" strength={0.3}>
             <span className="group relative inline-flex h-14 items-center overflow-hidden rounded-full bg-accent px-10 text-lg font-medium text-white transition-all duration-300 hover:shadow-[0_0_32px_rgba(42,157,143,0.4)]">
               <span className="relative z-10">Get Early Access</span>
               <span className="absolute inset-0 bg-white/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
