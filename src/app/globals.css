@@ -78,3 +78,26 @@ html.lenis body {
   outline-offset: 2px;
   border-radius: 4px;
 }
+
+@property --aurora-angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes aurora-rotate {
+  to { --aurora-angle: 360deg; }
+}
+
+@keyframes aurora-drift {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(3%, -2%) scale(1.05); }
+  66% { transform: translate(-2%, 3%) scale(0.97); }
+}
+
+@keyframes float-particle {
+  0%, 100% { transform: translateY(0) scale(1); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateY(-120px) scale(0.5); opacity: 0; }
+}

@@ -16,9 +16,9 @@ export function Nav() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-5 py-4 sm:px-8 sm:py-5 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-5 py-4 sm:px-8 sm:py-5 transition-all duration-500 ${
         scrolled
-          ? "bg-stone-bg shadow-[0_1px_0_0_#E7E5E4]"
+          ? "bg-stone-bg/80 shadow-[0_1px_0_0_#E7E5E4] backdrop-blur-xl"
           : "bg-transparent"
       }`}
     >

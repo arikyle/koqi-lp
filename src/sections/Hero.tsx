@@ -1,14 +1,15 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { ScrollCue } from "@/components/ScrollCue";
+import { MagneticButton } from "@/components/MagneticButton";
 
 const headlineEase = [0.22, 1, 0.36, 1] as const;
 
 const headlines = [
   { text: "The agents who close more", className: "text-[32px] sm:text-5xl md:text-7xl" },
-  { text: "don’t work harder.", className: "text-[28px] sm:text-[42px] md:text-[64px]" },
+  { text: "don't work harder.", className: "text-[28px] sm:text-[42px] md:text-[64px]" },
   { text: "They see more.", className: "text-[28px] sm:text-[42px] md:text-[64px]" },
 ];
 
@@ -26,6 +27,17 @@ function FilmGrain() {
 
 export function Hero() {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const sectionRef = useRef<HTMLElement>(null);
+
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start start", "end start"],
+  });
+
+  const videoScale = useTransform(scrollYProgress, [0, 1], [1, 1.15]);
+  const overlayOpacity = useTransform(scrollYProgress, [0, 0.8], [0, 0.3]);
+  const contentY = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
+  const contentOpacity = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
 
   useEffect(() => {
     const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -35,25 +47,34 @@ export function Hero() {
   }, []);
 
   return (
-    <section className="relative flex h-screen w-full items-end overflow-hidden">
-      <video
-        ref={videoRef}
-        autoPlay
-        muted
-        loop
-        playsInline
-        poster="/media/hero-poster.jpg"
-        className="absolute inset-0 h-full w-full object-cover"
+    <section ref={sectionRef} className="relative flex h-screen w-full items-end overflow-hidden">
+      <motion.div
+        className="absolute inset-0"
+        style={{ scale: videoScale }}
       >
-        <source src="/media/hero.mp4" type="video/mp4" />
-      </video>
+        <video
+          ref={videoRef}
+          autoPlay
+          muted
+          loop
+          playsInline
+          poster="/media/hero-poster.jpg"
+          className="h-full w-full object-cover"
+        >
+          <source src="/media/hero.mp4" type="video/mp4" />
+        </video>
+      </motion.div>
 
       <FilmGrain />
 
       <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent" />
       <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-transparent to-transparent" />
+      <motion.div className="absolute inset-0 bg-black" style={{ opacity: overlayOpacity }} />
 
-      <div className="relative z-10 flex flex-col gap-6 p-10 pb-24 md:p-20 md:pb-28">
+      <motion.div
+        className="relative z-10 flex flex-col gap-6 p-10 pb-24 md:p-20 md:pb-28"
+        style={{ y: contentY, opacity: contentOpacity }}
+      >
         <div className="flex flex-col gap-0">
           {headlines.map((line, i) => (
             <motion.h1
@@ -89,17 +110,16 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 1.1, ease: headlineEase }}
           className="mt-2"
         >
-          <a
-            href="#"
-            className="inline-block rounded-full bg-accent px-8 py-3.5 text-base font-medium text-white transition-opacity hover:opacity-90"
-          >
-            Get Early Access
-          </a>
+          <MagneticButton href="#" strength={0.25}>
+            <span className="inline-block rounded-full bg-accent px-8 py-3.5 text-base font-medium text-white transition-all duration-300 hover:shadow-[0_0_32px_rgba(42,157,143,0.4)]">
+              Get Early Access
+            </span>
+          </MagneticButton>
           <span className="mt-3 block text-sm text-white/40 sm:ml-4 sm:mt-0 sm:inline">
             No credit card. No commitment.
           </span>
         </motion.div>
-      </div>
+      </motion.div>
 
       <motion.div
         initial={{ opacity: 0 }}

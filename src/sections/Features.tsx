@@ -32,7 +32,7 @@ const features = [
 function ScreenshotVisual({ src, alt }: { src: string; alt: string }) {
   return (
     <div className="flex h-full items-center justify-center p-4">
-      <div className="w-full overflow-hidden rounded-2xl border border-stone-200/80 bg-white shadow-lg">
+      <div className="w-full overflow-hidden rounded-2xl border border-white/10 bg-white shadow-2xl shadow-black/40">
         <img
           src={src}
           alt={alt}
@@ -45,22 +45,22 @@ function ScreenshotVisual({ src, alt }: { src: string; alt: string }) {
 
 function MobileFeatures() {
   return (
-    <section className="block bg-stone-bg px-6 py-24 md:hidden">
+    <section className="block bg-[#0A0A0A] px-6 py-24 md:hidden">
       <div className="mx-auto max-w-xl">
-        <p className="mb-16 font-display text-3xl leading-snug text-ink">
+        <p className="mb-16 font-display text-3xl leading-snug text-white">
           Built around one question:
           <br />
-          <span className="text-muted">
+          <span className="text-white/50">
             what if your platform actually knew how good you are?
           </span>
         </p>
         <div className="space-y-20">
           {features.map((feature, i) => (
             <div key={i}>
-              <h3 className="font-display text-2xl text-ink">
+              <h3 className="font-display text-2xl text-white">
                 {feature.title}
               </h3>
-              <p className="mt-3 text-lg leading-relaxed text-muted">
+              <p className="mt-3 text-lg leading-relaxed text-white/60">
                 {feature.body}
               </p>
               <div className="mt-8">
@@ -106,15 +106,15 @@ function DesktopFeatures() {
   }, []);
 
   return (
-    <section className="hidden bg-stone-bg md:block">
+    <section className="hidden bg-[#0A0A0A] md:block">
       <div ref={containerRef} className="relative" style={{ height: "300vh" }}>
         <div className="sticky top-0 flex h-screen items-center px-20">
           <div className="mx-auto flex w-full max-w-7xl gap-20">
             <div className="flex flex-1 flex-col justify-center">
-              <p className="mb-12 font-display text-[48px] leading-tight text-ink">
+              <p className="mb-12 font-display text-[48px] leading-tight text-white">
                 Built around one question:
                 <br />
-                <span className="text-muted">
+                <span className="text-white/50">
                   what if your platform actually knew how good you are?
                 </span>
               </p>
@@ -132,10 +132,10 @@ function DesktopFeatures() {
                       right: 0,
                     }}
                   >
-                    <h3 className="font-display text-2xl text-ink">
+                    <h3 className="font-display text-2xl text-white">
                       {feature.title}
                     </h3>
-                    <p className="mt-3 text-lg leading-relaxed text-muted">
+                    <p className="mt-3 text-lg leading-relaxed text-white/60">
                       {feature.body}
                     </p>
                   </div>
@@ -149,7 +149,7 @@ function DesktopFeatures() {
                     className="h-0.5 w-8 rounded-full transition-colors duration-300"
                     style={{
                       backgroundColor:
-                        activeIndex === i ? "#2A9D8F" : "#E7E5E4",
+                        activeIndex === i ? "#2A9D8F" : "rgba(255,255,255,0.15)",
                     }}
                   />
                 ))}
@@ -160,9 +160,14 @@ function DesktopFeatures() {
               {features.map((feature, i) => (
                 <div
                   key={i}
-                  className="inset-0 w-full transition-opacity duration-500"
+                  className="inset-0 w-full transition-all duration-700"
                   style={{
                     opacity: activeIndex === i ? 1 : 0,
+                    transform: activeIndex === i
+                      ? "translateY(0) scale(1)"
+                      : activeIndex > i
+                        ? "translateY(-16px) scale(0.97)"
+                        : "translateY(16px) scale(0.97)",
                     position: i === 0 ? "relative" : "absolute",
                     pointerEvents: activeIndex === i ? "auto" : "none",
                   }}

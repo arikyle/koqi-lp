@@ -2,10 +2,20 @@
 
 import { useEffect, useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { IPhoneFrame } from "@/components/IPhoneFrame";
+
+if (typeof window !== "undefined") {
+  gsap.registerPlugin(ScrollTrigger);
+}
 
 export function Brokerage() {
   const sectionRef = useRef<HTMLElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
+  const phonesRef = useRef<HTMLDivElement>(null);
+  const triggersRef = useRef<ScrollTrigger[]>([]);
+
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ["start end", "end start"],
@@ -18,6 +28,49 @@ export function Brokerage() {
     if (mq.matches && videoRef.current) {
       videoRef.current.pause();
     }
+
+    if (mq.matches || !phonesRef.current) return;
+
+    const phones = phonesRef.current.querySelectorAll<HTMLElement>("[data-brokerage-phone]");
+
+    gsap.set(phonesRef.current, { perspective: 1000 });
+
+    phones.forEach((phone, i) => {
+      const direction = i === 0 ? -1 : 1;
+      gsap.set(phone, {
+        y: 100,
+        x: direction * 40,
+        opacity: 0,
+        rotateY: direction * 10,
+        scale: 0.9,
+        transformOrigin: i === 0 ? "100% 100%" : "0% 100%",
+      });
+
+      const trigger = ScrollTrigger.create({
+        trigger: phonesRef.current!,
+        start: "top 75%",
+        once: true,
+        onEnter: () => {
+          gsap.to(phone, {
+            y: 0,
+            x: 0,
+            opacity: 1,
+            rotateY: 0,
+            scale: 1,
+            duration: 1.1,
+            delay: 0.15 + i * 0.2,
+            ease: "power3.out",
+          });
+        },
+      });
+
+      triggersRef.current.push(trigger);
+    });
+
+    return () => {
+      triggersRef.current.forEach((t) => t.kill());
+      triggersRef.current = [];
+    };
   }, []);
 
   return (
@@ -87,7 +140,7 @@ export function Brokerage() {
         </motion.div>
       </div>
 
-      <div className="bg-stone-bg px-6 py-24 md:py-32">
+      <div className="bg-[#0A0A0A] px-6 py-24 md:py-32">
         <div className="mx-auto max-w-7xl">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
@@ -96,27 +149,44 @@ export function Brokerage() {
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
             className="mb-12 text-center"
           >
-            <p className="text-xs font-medium uppercase tracking-[0.2em] text-muted">
+            <p className="text-xs font-medium uppercase tracking-[0.2em] text-white/40">
               Brokerage tools
             </p>
-            <h3 className="mt-4 font-display text-[28px] text-ink sm:text-4xl">
+            <h3 className="mt-4 font-display text-[28px] text-white sm:text-4xl">
               See every agent. Know who&apos;s growing.
             </h3>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 32 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-5%" }}
-            transition={{ duration: 0.6, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
-            className="overflow-hidden rounded-2xl border border-stone-200/80 bg-white shadow-lg"
+          <div
+            ref={phonesRef}
+            className="flex flex-wrap items-end justify-center gap-8 sm:gap-12 md:gap-16"
           >
-            <img
-              src="/media/agent-profile.png"
-              alt="Agent performance profile showing ACCS score, coaching recommendations, and 30-day history"
-              className="w-full"
-            />
-          </motion.div>
+            <div data-brokerage-phone className="flex flex-col items-center">
+              <IPhoneFrame
+                screens={[
+                  { src: "/media/screen-agents-list.png", alt: "Brokerage agents ranked by ACCS score" },
+                  { src: "/media/screen-agent-details.png", alt: "Agent profile with performance history" },
+                ]}
+                interval={4000}
+              />
+              <p className="mt-6 text-center text-sm font-medium text-white/70">
+                Team Rankings
+              </p>
+            </div>
+
+            <div data-brokerage-phone className="flex flex-col items-center" style={{ marginTop: 24 }}>
+              <IPhoneFrame
+                screens={[
+                  { src: "/media/screen-accs-performance.png", alt: "ACCS Performance breakdown" },
+                  { src: "/media/screen-estimate-form.png", alt: "Estimate quality assessment form" },
+                ]}
+                interval={4500}
+              />
+              <p className="mt-6 text-center text-sm font-medium text-white/70">
+                Performance Tracking
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>

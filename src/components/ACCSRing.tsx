@@ -5,9 +5,10 @@ import { useEffect, useRef, useState } from "react";
 interface ACCSRingProps {
   score?: number;
   size?: number;
+  dark?: boolean;
 }
 
-export function ACCSRing({ score = 87, size: sizeProp = 400 }: ACCSRingProps) {
+export function ACCSRing({ score = 87, size: sizeProp = 400, dark = false }: ACCSRingProps) {
   const [size, setSize] = useState(sizeProp);
 
   useEffect(() => {
@@ -85,7 +86,7 @@ export function ACCSRing({ score = 87, size: sizeProp = 400 }: ACCSRingProps) {
           cy={size / 2}
           r={radius}
           fill="none"
-          stroke="#E7E5E4"
+          stroke={dark ? "rgba(255,255,255,0.1)" : "#E7E5E4"}
           strokeWidth={strokeWidth}
         />
         <circle
@@ -102,10 +103,10 @@ export function ACCSRing({ score = 87, size: sizeProp = 400 }: ACCSRingProps) {
         />
       </svg>
       <div className="absolute inset-0 flex flex-col items-center justify-center gap-1">
-        <span className="font-display leading-none text-ink" style={{ fontSize: size * 0.28 }}>
+        <span className={`font-display leading-none ${dark ? "text-white" : "text-ink"}`} style={{ fontSize: size * 0.28 }}>
           {Math.round(progress)}
         </span>
-        <span className="text-xs font-medium uppercase tracking-[0.15em] text-muted">ACCS</span>
+        <span className={`text-xs font-medium uppercase tracking-[0.15em] ${dark ? "text-white/50" : "text-muted"}`}>ACCS</span>
       </div>
     </div>
   );
