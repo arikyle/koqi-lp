@@ -13,7 +13,7 @@ const problems = [
   {
     icon: "★",
     title: "Online reviews can be bought",
-    body: "5-star reviews are a marketing channel, not a quality signal. Agents with 200 reviews aren't necessarily better — they just asked more often.",
+    body: "5-star reviews are a marketing channel, not a quality signal. Agents with 200 reviews aren't necessarily better. They just asked more often.",
   },
   {
     icon: "📊",
@@ -23,7 +23,7 @@ const problems = [
   {
     icon: "💰",
     title: "\"Top Producer\" is a spending badge",
-    body: "Most \"Top Producer\" awards are based on GCI — gross commission income. That tells you what the agent earned. It says nothing about how well they served their clients.",
+    body: "Most \"Top Producer\" awards are based on GCI (gross commission income). That tells you what the agent earned. It says nothing about how well they served their clients.",
   },
   {
     icon: "📢",
@@ -35,7 +35,7 @@ const problems = [
 const accsExplainer = [
   {
     title: "Pricing Accuracy",
-    body: "Can this agent accurately estimate what your home will sell for? This is the single most valuable skill — and now it's measured.",
+    body: "Can this agent accurately estimate what your home will sell for? This is the single most valuable skill. And now it's measured.",
   },
   {
     title: "Confidence Calibration",
@@ -43,11 +43,11 @@ const accsExplainer = [
   },
   {
     title: "Local Specialization",
-    body: "An agent who's proven in YOUR neighborhood — not just your city. ZIP-level accuracy data reveals genuine local expertise.",
+    body: "An agent who's proven in YOUR neighborhood, not just your city. ZIP-level accuracy data reveals genuine local expertise.",
   },
   {
     title: "Track Record",
-    body: "ACCS decays with inactivity. A high score means the agent is sharp right now — not coasting on a deal from six months ago.",
+    body: "ACCS decays with inactivity. A high score means the agent is sharp right now. Not coasting on a deal from six months ago.",
   },
 ];
 
@@ -110,7 +110,7 @@ export default function ConsumersPage() {
               className="mx-auto mt-8 max-w-xl text-lg leading-relaxed text-white/60"
             >
               The agent at the top of your Zillow search paid to be there. Koqi
-              shows you who&apos;s actually good — with verified pricing accuracy
+              shows you who&apos;s actually good, with verified pricing accuracy
               data that no amount of marketing spend can fake.
             </motion.p>
 
@@ -215,7 +215,7 @@ export default function ConsumersPage() {
                   transition={{ duration: 0.6, delay: 0.2, ease }}
                   className="mt-6 text-lg leading-relaxed text-white/55"
                 >
-                  ACCS — Agent Competency &amp; Calibration Score — measures what
+                  ACCS (Agent Competency &amp; Calibration Score) measures what
                   actually matters when you&apos;re hiring someone to price the
                   biggest transaction of your life.
                 </motion.p>
@@ -266,7 +266,7 @@ export default function ConsumersPage() {
               className="mx-auto mt-8 max-w-lg text-lg leading-relaxed text-muted"
             >
               That&apos;s how real estate works today. The agents you see first
-              aren&apos;t the best — they&apos;re the ones who spent the most
+              aren&apos;t the best. They&apos;re the ones who spent the most
               on advertising. Koqi changes that by making skill visible and
               verifiable.
             </motion.p>
@@ -291,7 +291,7 @@ export default function ConsumersPage() {
                 {
                   step: "1",
                   title: "Enter your ZIP code",
-                  body: "See agents ranked by verified ACCS score in your specific neighborhood — not your metro area.",
+                  body: "See agents ranked by verified ACCS score in your specific neighborhood, not your metro area.",
                 },
                 {
                   step: "2",
@@ -301,7 +301,7 @@ export default function ConsumersPage() {
                 {
                   step: "3",
                   title: "Choose with confidence",
-                  body: "When you hire an agent with a 92 ACCS in your ZIP code, you know their pricing instincts are proven — not self-reported.",
+                  body: "When you hire an agent with a 92 ACCS in your ZIP code, you know their pricing instincts are proven, not self-reported.",
                 },
               ].map((item, i) => (
                 <motion.div

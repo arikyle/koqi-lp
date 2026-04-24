@@ -21,7 +21,7 @@ const valueProps = [
     number: "02",
     title: "Get rewarded for sharpening your instincts",
     description:
-      "Submit GPS-verified pricing estimates on real properties in your market. The closer you are to reality, the more you earn. This isn't a quiz — it's a pricing gym that rewards you for getting sharper.",
+      "Submit GPS-verified pricing estimates on real properties in your market. The closer you are to reality, the more you earn. This isn't a quiz. It's a pricing gym that rewards you for getting sharper.",
   },
   {
     number: "03",
@@ -96,9 +96,9 @@ export default function AgentsPage() {
               transition={{ duration: 0.6, delay: 0.3, ease }}
               className="mx-auto mt-8 max-w-xl text-lg leading-relaxed text-white/60"
             >
-              Koqi quantifies the skills that actually matter — pricing
-              accuracy, market expertise, calibration — and turns them into
-              a score your competitors can&apos;t fake.
+              Koqi quantifies the skills that actually matter: pricing
+              accuracy, market expertise, and calibration. A score your
+              competitors can&apos;t fake.
             </motion.p>
 
             <motion.div
@@ -151,7 +151,7 @@ export default function AgentsPage() {
                   Neither says you&apos;re{" "}
                   <em className="text-ink">good</em>. ACCS does. It measures
                   pricing accuracy, confidence calibration, local expertise,
-                  and consistency — in real time, always decaying, impossible
+                  and consistency. In real time. Always decaying. Impossible
                   to coast on.
                 </p>
                 <p className="mt-4 text-lg leading-relaxed text-muted">

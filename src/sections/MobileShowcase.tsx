@@ -189,7 +189,7 @@ export function MobileShowcase() {
             Your edge, everywhere.
           </h2>
           <p className="mx-auto mt-4 max-w-md text-lg text-white/50">
-            Check your ACCS, submit estimates, and get AI coaching — all from your phone.
+            Check your ACCS, submit estimates, and get AI coaching. All from your phone.
           </p>
         </motion.div>
 

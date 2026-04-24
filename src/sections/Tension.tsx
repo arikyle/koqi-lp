@@ -49,7 +49,7 @@ const paragraphs = [
 
 const noneStatements = [
   "None of them measure your pricing accuracy.",
-  "None of them show you where you’re strongest — or where you’re bleeding deals.",
+  "None of them show you where you’re strongest. Or where you’re bleeding deals.",
   "None of them reward you for improving.",
 ];
 

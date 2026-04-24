@@ -12,12 +12,12 @@ const ease = [0.22, 1, 0.36, 1] as const;
 const painPoints = [
   {
     problem: "You can see who closed last quarter.",
-    solution: "Koqi shows you who will close next quarter — and why.",
+    solution: "Koqi shows you who will close next quarter. And why.",
   },
   {
     problem: "You coach based on gut feel.",
     solution:
-      "Koqi pinpoints the exact skill gap holding each agent back — pricing accuracy, calibration, local knowledge — so coaching conversations are specific, not generic.",
+      "Koqi pinpoints the exact skill gap holding each agent back: pricing accuracy, calibration, local knowledge. Coaching conversations become specific, not generic.",
   },
   {
     problem: "You recruit on splits and promises.",
@@ -27,14 +27,14 @@ const painPoints = [
   {
     problem: "You lose top agents and don't know why.",
     solution:
-      "Top agents leave when they feel invisible. Koqi makes their skill visible on the team dashboard — not just their volume, their actual expertise.",
+      "Top agents leave when they feel invisible. Koqi makes their skill visible on the team dashboard. Not just their volume. Their actual expertise.",
   },
 ];
 
 const metrics = [
   { value: "5", label: "ACCS dimensions tracked per agent" },
   { value: "ZIP", label: "Level performance data" },
-  { value: "30d", label: "Rolling score — always current form" },
+  { value: "30d", label: "Rolling score, always current form" },
   { value: "∞", label: "Historical trend data" },
 ];
 
@@ -96,7 +96,7 @@ export default function BrokeragesPage() {
               transition={{ duration: 0.6, delay: 0.3, ease }}
               className="mx-auto mt-8 max-w-xl text-lg leading-relaxed text-white/60"
             >
-              Koqi gives brokerages real-time visibility into agent skill —
+              Koqi gives brokerages real-time visibility into agent skill,
               not just activity. Track ACCS scores across your team. Spot
               coaching opportunities before they become attrition. Build a
               recruiting advantage your competitors can&apos;t replicate.
@@ -256,7 +256,7 @@ export default function BrokeragesPage() {
               {[
                 {
                   title: "Coaching",
-                  body: "Stop saying \"prospect more.\" Start saying \"your condo pricing is 12% off in 90402 — here's a targeted drill.\"",
+                  body: "Stop saying \"prospect more.\" Start saying \"your condo pricing is 12% off in 90402. Here's a targeted drill.\"",
                 },
                 {
                   title: "Recruiting",
@@ -264,7 +264,7 @@ export default function BrokeragesPage() {
                 },
                 {
                   title: "Retention",
-                  body: "When your top agents see their excellence recognized on a team dashboard — not volume, actual skill — they stay.",
+                  body: "When your top agents see their excellence recognized on a team dashboard, not volume but actual skill, they stay.",
                 },
               ].map((item, i) => (
                 <motion.div

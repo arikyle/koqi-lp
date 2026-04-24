@@ -7,17 +7,17 @@ const faqs = [
   {
     question: "What is Koqi and how does it work?",
     answer:
-      "Koqi is a performance intelligence platform for real estate agents and brokerages. It measures the skills that actually predict outcomes — pricing accuracy, market knowledge, confidence calibration — and distills them into one score called ACCS. Unlike CRM dashboards that track activity, Koqi tracks ability.",
+      "Koqi is a performance intelligence platform for real estate agents and brokerages. It measures the skills that actually predict outcomes: pricing accuracy, market knowledge, and confidence calibration. It distills them into one score called ACCS. Unlike CRM dashboards that track activity, Koqi tracks ability.",
   },
   {
     question: "What is the ACCS score?",
     answer:
-      "ACCS stands for Agent Competency & Calibration Score. It combines five dimensions: pricing accuracy, confidence calibration, local specialization, property type expertise, and engagement consistency. Your score always reflects current form — it decays with inactivity, so it can't be gamed or inflated by past performance alone.",
+      "ACCS stands for Agent Competency & Calibration Score. It combines five dimensions: pricing accuracy, confidence calibration, local specialization, property type expertise, and engagement consistency. Your score always reflects current form. It decays with inactivity, so it can't be gamed or inflated by past performance alone.",
   },
   {
     question: "How does Estimate-to-Earn work?",
     answer:
-      "You submit GPS-verified pricing estimates on real properties listed in your market. After the property sells, Koqi compares your estimate to the final sale price. The closer you are, the more you earn. It's deliberate practice with real stakes — a pricing gym that rewards you for getting sharper.",
+      "You submit GPS-verified pricing estimates on real properties listed in your market. After the property sells, Koqi compares your estimate to the final sale price. The closer you are, the more you earn. It's deliberate practice with real stakes. A pricing gym that rewards you for getting sharper.",
   },
   {
     question: "Is Koqi free to use?",
@@ -27,7 +27,7 @@ const faqs = [
   {
     question: "How does Koqi help brokerages?",
     answer:
-      "Koqi gives brokerages data-driven visibility into agent performance — not just who's closing deals, but who's actually skilled at pricing. Track ACCS trends across your entire team, identify coaching opportunities before they become attrition, and build a recruiting pitch backed by performance data your competitors can't match.",
+      "Koqi gives brokerages data-driven visibility into agent performance. Not just who's closing deals, but who's actually skilled at pricing. Track ACCS trends across your entire team, identify coaching opportunities before they become attrition, and build a recruiting pitch backed by performance data your competitors can't match.",
   },
   {
     question: "What markets does Koqi cover?",
@@ -37,7 +37,7 @@ const faqs = [
   {
     question: "How is Koqi different from a real estate CRM?",
     answer:
-      "CRMs track activity — calls made, emails sent, appointments booked. Koqi measures skill. It answers a fundamentally different question: not 'how busy are you?' but 'how good are you?' Your ACCS score is an objective, verifiable measure of your pricing instincts and market expertise that no CRM can replicate.",
+      "CRMs track activity: calls made, emails sent, appointments booked. Koqi measures skill. It answers a fundamentally different question: not 'how busy are you?' but 'how good are you?' Your ACCS score is an objective, verifiable measure of your pricing instincts and market expertise that no CRM can replicate.",
   },
   {
     question: "Can I use my ACCS score for recruiting or marketing?",

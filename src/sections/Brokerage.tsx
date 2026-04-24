@@ -114,7 +114,7 @@ export function Brokerage() {
 
           <div className="mt-10 space-y-4 text-lg leading-relaxed text-white/75">
             <p>
-              Koqi gives brokerages real visibility into agent performance — not
+              Koqi gives brokerages real visibility into agent performance. Not
               just who&apos;s busy, but who&apos;s actually good.
             </p>
             <p>Track ACCS trends across your team.</p>
