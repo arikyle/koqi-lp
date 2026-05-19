@@ -53,39 +53,23 @@ export function CMA() {
           </p>
         </motion.div>
 
-        <div ref={imgRef} className="relative mt-16">
-          <motion.div
-            initial={{ opacity: 0, y: 32 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-10%" }}
-            transition={{ duration: 0.8, ease }}
-            className="overflow-hidden rounded-2xl border border-white/10"
-            style={{ maxHeight: 560 }}
-          >
-            <motion.img
-              src="/media/cma-valuation.png"
-              alt="Koqi CMA showing estimated market value with confidence bands and pricing slider"
-              className="w-full object-cover object-top"
-              style={{ y: imgY }}
-            />
-          </motion.div>
+        <motion.div
+          ref={imgRef}
+          initial={{ opacity: 0, y: 32 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-10%" }}
+          transition={{ duration: 0.8, ease }}
+          className="mt-16 overflow-hidden rounded-2xl border border-white/10"
+        >
+          <motion.img
+            src="/media/cma-valuation.png"
+            alt="Koqi CMA report for 22312 Delia Court showing estimated market value, confidence bands, and pricing slider"
+            className="w-full"
+            style={{ y: imgY }}
+          />
+        </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 40, x: 20 }}
-            whileInView={{ opacity: 1, y: 0, x: 0 }}
-            viewport={{ once: true, margin: "-10%" }}
-            transition={{ duration: 0.8, delay: 0.2, ease }}
-            className="absolute -bottom-12 right-4 w-[55%] max-w-md overflow-hidden rounded-2xl border border-white/10 shadow-2xl sm:right-8 md:-bottom-16 md:right-12 md:w-[45%]"
-          >
-            <img
-              src="/media/cma-comp-detail.png"
-              alt="Comparable property analysis with relevance scoring and applied adjustments"
-              className="w-full"
-            />
-          </motion.div>
-        </div>
-
-        <div className="mt-28 grid gap-10 md:mt-32 md:grid-cols-3 md:gap-12">
+        <div className="mt-16 grid gap-10 md:grid-cols-3 md:gap-12">
           {features.map((feature, i) => (
             <motion.div
               key={i}
