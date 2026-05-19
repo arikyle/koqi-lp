@@ -1,6 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -20,6 +21,13 @@ const features = [
 ];
 
 export function CMA() {
+  const imgRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: imgRef,
+    offset: ["start end", "end start"],
+  });
+  const imgY = useTransform(scrollYProgress, [0, 1], ["4%", "-4%"]);
+
   return (
     <section id="cma" className="bg-[#0A0A0A] px-6 py-24 md:py-32">
       <div className="mx-auto max-w-5xl">
@@ -39,11 +47,43 @@ export function CMA() {
 
           <p className="mt-6 max-w-[640px] text-lg leading-relaxed text-white/60">
             Most CMA tools spit out comps and leave you to figure out the rest.
-            Koqi&apos;s CMA walks you through pricing like a seasoned mentor --
+            Koqi&apos;s CMA walks you through pricing like a seasoned mentor,
             adjusting for condition, calculating appreciation, flagging risk,
             and learning from each deal that closes.
           </p>
         </motion.div>
+
+        <div ref={imgRef} className="mt-16 grid items-start gap-8 md:grid-cols-2">
+          <motion.div
+            initial={{ opacity: 0, y: 32 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-10%" }}
+            transition={{ duration: 0.8, ease }}
+            className="overflow-hidden rounded-2xl border border-white/10"
+          >
+            <motion.img
+              src="/media/cma-valuation.png"
+              alt="Koqi CMA showing estimated market value with confidence bands and pricing slider"
+              className="w-full"
+              style={{ y: imgY }}
+            />
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 32 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-10%" }}
+            transition={{ duration: 0.8, delay: 0.15, ease }}
+            className="overflow-hidden rounded-2xl border border-white/10"
+          >
+            <motion.img
+              src="/media/cma-comp-detail.png"
+              alt="Comparable property analysis with relevance scoring and applied adjustments"
+              className="w-full"
+              style={{ y: imgY }}
+            />
+          </motion.div>
+        </div>
 
         <div className="mt-16 grid gap-10 md:grid-cols-3 md:gap-12">
           {features.map((feature, i) => (
@@ -72,7 +112,7 @@ export function CMA() {
           className="mt-16"
         >
           <a
-            href="https://form.typeform.com/to/d7BbovyW"
+            href="/cma-tool"
             className="inline-block rounded-full border-2 border-white/30 px-8 py-3.5 text-base font-medium text-white transition-colors hover:border-white hover:bg-white hover:text-ink"
           >
             See the CMA in action

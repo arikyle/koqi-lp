@@ -8,39 +8,6 @@ import { MagneticButton } from "@/components/MagneticButton";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
-const steps = [
-  {
-    number: "01",
-    title: "Subject property lookup",
-    description:
-      "Enter an address and Koqi pulls property details, tax records, and listing history. You confirm the basics and add condition notes the data can't capture.",
-  },
-  {
-    number: "02",
-    title: "Intelligent comp selection",
-    description:
-      "Koqi surfaces comps ranked by relevance: recency, similarity, and local market patterns. You pick the ones that fit. Koqi flags outliers before they skew your valuation.",
-  },
-  {
-    number: "03",
-    title: "Market-aware adjustments",
-    description:
-      "Appreciation rates calculated from real sales data at the ZIP level. Your adjustments reflect what the market is doing right now, not what a static table said last quarter.",
-  },
-  {
-    number: "04",
-    title: "Risk assessment and pricing scenarios",
-    description:
-      "Koqi calculates confidence bands around your valuation and surfaces risk factors: days on market trends, price reduction rates, and seasonal patterns in the ZIP.",
-  },
-  {
-    number: "05",
-    title: "Accuracy tracking",
-    description:
-      "Each CMA feeds your ACCS score. When properties close, Koqi compares your estimate to the sale price. Run enough of them and your accuracy record speaks louder than any pitch deck.",
-  },
-];
-
 const differentiators = [
   {
     title: "Live market data",
@@ -62,17 +29,27 @@ const differentiators = [
 
 export default function CMAToolPage() {
   const heroRef = useRef<HTMLElement>(null);
-  const { scrollYProgress } = useScroll({
+  const valuationRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress: heroScroll } = useScroll({
     target: heroRef,
     offset: ["start start", "end start"],
   });
-  const heroOpacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
-  const heroScale = useTransform(scrollYProgress, [0, 0.8], [1, 0.95]);
+  const heroOpacity = useTransform(heroScroll, [0, 0.8], [1, 0]);
+  const heroScale = useTransform(heroScroll, [0, 0.8], [1, 0.95]);
+
+  const { scrollYProgress: valScroll } = useScroll({
+    target: valuationRef,
+    offset: ["start end", "end start"],
+  });
+  const valScale = useTransform(valScroll, [0, 0.4, 0.6], [0.9, 1, 1]);
+  const valOpacity = useTransform(valScroll, [0, 0.3], [0, 1]);
+  const valRotateX = useTransform(valScroll, [0, 0.4], [6, 0]);
 
   return (
     <>
       <Nav />
       <main>
+        {/* Hero */}
         <section
           ref={heroRef}
           className="relative flex min-h-screen items-center justify-center overflow-hidden bg-[#0A0A0A] px-6"
@@ -140,53 +117,159 @@ export default function CMAToolPage() {
           </motion.div>
         </section>
 
-        <section className="bg-stone-bg px-6 py-24 md:py-32">
-          <div className="mx-auto max-w-4xl">
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-10%" }}
-              transition={{ duration: 0.6, ease }}
-              className="text-center font-display text-[28px] text-ink sm:text-4xl md:text-[48px]"
+        {/* Valuation Screenshot */}
+        <section className="bg-stone-bg px-6 py-24 md:py-32" style={{ perspective: 1200 }}>
+          <div ref={valuationRef} className="mx-auto max-w-4xl">
+            <motion.div
+              style={{ scale: valScale, opacity: valOpacity, rotateX: valRotateX, transformOrigin: "50% 100%" }}
+              className="overflow-hidden rounded-2xl border border-stone-200 shadow-2xl"
             >
-              Five steps. One valuation you can stand behind.
-            </motion.h2>
+              <img
+                src="/media/cma-valuation.png"
+                alt="Koqi CMA report for 22312 Delia Court showing estimated market value, confidence bands, and pricing slider"
+                className="w-full"
+              />
+            </motion.div>
+          </div>
+        </section>
 
-            <div className="mt-20 space-y-16">
-              {steps.map((step, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, y: 40 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-10%" }}
-                  transition={{ duration: 0.7, ease }}
-                  className="flex gap-8"
-                >
-                  <span className="shrink-0 font-display text-[48px] leading-none text-accent/30">
-                    {step.number}
-                  </span>
-                  <div>
-                    <h3 className="font-display text-2xl text-ink">
-                      {step.title}
-                    </h3>
-                    <p className="mt-4 text-lg leading-relaxed text-muted">
-                      {step.description}
-                    </p>
-                  </div>
-                </motion.div>
-              ))}
+        {/* Step 1-2: Comp Selection */}
+        <section className="bg-[#0A0A0A] px-6 py-24 md:py-32">
+          <div className="mx-auto max-w-5xl">
+            <div className="grid items-center gap-12 md:grid-cols-2 md:gap-20">
+              <motion.div
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-10%" }}
+                transition={{ duration: 0.6, ease }}
+              >
+                <span className="font-display text-[48px] leading-none text-accent/30">01</span>
+                <h2 className="mt-4 font-display text-[28px] leading-snug text-white sm:text-4xl">
+                  Intelligent comp selection
+                </h2>
+                <p className="mt-6 text-lg leading-relaxed text-white/60">
+                  Koqi surfaces comps ranked by relevance: recency, similarity,
+                  and local market patterns. You pick the ones that fit. Koqi
+                  flags outliers before they skew your valuation.
+                </p>
+                <p className="mt-4 text-lg leading-relaxed text-white/60">
+                  Each comp card shows a relevance score, selection rationale,
+                  and applied adjustments with dollar amounts.
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 32 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-10%" }}
+                transition={{ duration: 0.8, delay: 0.15, ease }}
+                className="overflow-hidden rounded-2xl border border-white/10"
+              >
+                <img
+                  src="/media/cma-comp-detail.png"
+                  alt="Comparable property card showing relevance score, property details, selection rationale, and adjustment calculations"
+                  className="w-full"
+                />
+              </motion.div>
             </div>
           </div>
         </section>
 
+        {/* Step 3: Market Intelligence */}
+        <section className="bg-stone-bg px-6 py-24 md:py-32">
+          <div className="mx-auto max-w-5xl">
+            <div className="grid items-center gap-12 md:grid-cols-2 md:gap-20">
+              <motion.div
+                initial={{ opacity: 0, y: 32 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-10%" }}
+                transition={{ duration: 0.8, ease }}
+                className="overflow-hidden rounded-2xl border border-stone-200 shadow-lg md:order-1"
+              >
+                <img
+                  src="/media/cma-market-intel.png"
+                  alt="Market intelligence dashboard showing months of supply, absorption rate, sale-to-list ratio, and trend charts for ZIP 91302"
+                  className="w-full"
+                />
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-10%" }}
+                transition={{ duration: 0.6, ease }}
+                className="md:order-2"
+              >
+                <span className="font-display text-[48px] leading-none text-accent/30">02</span>
+                <h2 className="mt-4 font-display text-[28px] leading-snug text-ink sm:text-4xl">
+                  Market-aware adjustments
+                </h2>
+                <p className="mt-6 text-lg leading-relaxed text-muted">
+                  Hyperlocal data for your ZIP: months of supply, absorption rate,
+                  sale-to-list ratio, median $/sqft, and days on market. With
+                  12-month trend charts so you see where the market is heading.
+                </p>
+                <p className="mt-4 text-lg leading-relaxed text-muted">
+                  Your adjustments reflect what the market is doing right now,
+                  not what a static table said last quarter.
+                </p>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Step 4: Pricing Strategy */}
         <section className="bg-[#0A0A0A] px-6 py-24 md:py-32">
+          <div className="mx-auto max-w-5xl">
+            <div className="grid items-center gap-12 md:grid-cols-2 md:gap-20">
+              <motion.div
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-10%" }}
+                transition={{ duration: 0.6, ease }}
+              >
+                <span className="font-display text-[48px] leading-none text-accent/30">03</span>
+                <h2 className="mt-4 font-display text-[28px] leading-snug text-white sm:text-4xl">
+                  Risk assessment and pricing scenarios
+                </h2>
+                <p className="mt-6 text-lg leading-relaxed text-white/60">
+                  Three pricing approaches: conservative, market, and aspirational.
+                  Each shows expected days on market, risk level, and trade-offs
+                  so you and your client make informed decisions.
+                </p>
+                <p className="mt-4 text-lg leading-relaxed text-white/60">
+                  Below the strategy, your ACCS and market expertise scores
+                  build credibility with the client before the listing
+                  conversation starts.
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 32 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-10%" }}
+                transition={{ duration: 0.8, delay: 0.15, ease }}
+                className="overflow-hidden rounded-2xl border border-white/10"
+              >
+                <img
+                  src="/media/cma-pricing-strategy.png"
+                  alt="Three pricing strategies showing conservative, market, and aspirational approaches with risk levels and trade-offs"
+                  className="w-full"
+                />
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Differentiators */}
+        <section className="bg-stone-bg px-6 py-24 md:py-32">
           <div className="mx-auto max-w-5xl">
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-10%" }}
               transition={{ duration: 0.6, ease }}
-              className="text-center font-display text-[28px] text-white sm:text-4xl md:text-[48px]"
+              className="text-center font-display text-[28px] text-ink sm:text-4xl md:text-[48px]"
             >
               What makes this CMA different.
             </motion.h2>
@@ -199,32 +282,33 @@ export default function CMAToolPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-5%" }}
                   transition={{ duration: 0.6, delay: i * 0.1, ease }}
-                  className="rounded-2xl border border-white/10 bg-white/5 p-8"
+                  className="rounded-2xl border border-stone-200 bg-white p-8"
                 >
                   <h3 className="font-display text-lg text-accent">
                     {item.title}
                   </h3>
-                  <p className="mt-3 text-base leading-relaxed text-white/50">
+                  <p className="mt-3 text-base leading-relaxed text-muted">
                     {item.body}
                   </p>
                 </motion.div>
               ))}
             </div>
 
-            <p className="mt-8 text-center text-xs text-white/30">
+            <p className="mt-8 text-center text-xs text-muted/60">
               Patent pending
             </p>
           </div>
         </section>
 
-        <section className="bg-stone-bg px-6 py-24 md:py-32">
+        {/* CTA */}
+        <section className="bg-[#0A0A0A] px-6 py-24 md:py-32">
           <div className="mx-auto max-w-3xl text-center">
             <motion.h2
               initial={{ opacity: 0, scale: 0.85 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, margin: "-10%" }}
               transition={{ duration: 0.8, ease }}
-              className="font-display text-[28px] leading-snug text-ink sm:text-4xl md:text-[56px] md:leading-tight"
+              className="font-display text-[28px] leading-snug text-white sm:text-4xl md:text-[56px] md:leading-tight"
             >
               Your first CMA takes ten minutes.
               <br />
@@ -244,7 +328,7 @@ export default function CMAToolPage() {
                   <span className="absolute inset-0 bg-white/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                 </span>
               </MagneticButton>
-              <p className="mt-4 text-sm text-muted">
+              <p className="mt-4 text-sm text-white/40">
                 Free during beta &middot; Your score starts building on day one
               </p>
             </motion.div>
@@ -253,7 +337,7 @@ export default function CMAToolPage() {
 
         <footer className="border-t border-stone-200 bg-stone-bg px-6 py-12">
           <div className="mx-auto flex max-w-4xl flex-col items-center gap-4 text-center">
-            <div className="flex items-center gap-6">
+            <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
               <Link href="/" className="text-sm font-medium text-ink hover:text-accent transition-colors">koqi.ai</Link>
               <Link href="/agents" className="text-sm text-muted hover:text-accent transition-colors">Agents</Link>
               <Link href="/brokerages" className="text-sm text-muted hover:text-accent transition-colors">Brokerages</Link>
