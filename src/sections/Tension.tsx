@@ -42,15 +42,13 @@ function WordReveal({
 }
 
 const paragraphs = [
-  "You’ve paid for the coaching programs that recycle the same advice.",
-  "You’ve bought leads that ghost before the first callback.",
-  "You’ve logged activity into dashboards that tell you nothing about how good you actually are.",
+  "You’ve bought the CRM. You’ve paid for leads. You’ve sat through coaching calls that teach you to \"know your numbers.\"",
+  "None of it measures the one thing that wins listings and closes deals: how well you price property.",
 ];
 
 const noneStatements = [
-  "None of them measure your pricing accuracy.",
-  "None of them show you where you’re strongest. Or where you’re bleeding deals.",
-  "None of them reward you for improving.",
+  "Activity trackers count your calls.",
+  "Koqi measures your accuracy.",
 ];
 
 export function Tension() {
@@ -64,9 +62,9 @@ export function Tension() {
           transition={{ duration: 0.8, ease }}
           className="font-display text-4xl leading-snug text-ink md:text-[56px] md:leading-tight"
         >
-          The industry sells agents more tools.
+          The industry gives agents more dashboards.
           <br />
-          What agents need is an edge.
+          What agents need is better judgment.
         </motion.h2>
 
         <motion.div
@@ -89,15 +87,6 @@ export function Tension() {
           </div>
         </div>
 
-        <motion.p
-          initial={{ opacity: 0, x: 40 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, margin: "-10%" }}
-          transition={{ duration: 0.8, ease }}
-          className="mt-16 font-display text-[26px] leading-snug text-ink sm:mt-[120px] sm:text-[32px] md:text-[40px]"
-        >
-          They track activity. Koqi tracks ability.
-        </motion.p>
       </div>
     </section>
   );

@@ -5,6 +5,21 @@ import { motion, useScroll, useTransform } from "framer-motion";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
+const testimonials = [
+  {
+    quote: "This is the first platform that told me something about my business I didn’t already know.",
+    attribution: "Beta user · 11-year agent · Los Angeles",
+  },
+  {
+    quote: "I ran a CMA and it flagged an adjustment I would have missed. That’s not software. That’s a second opinion.",
+    attribution: "Beta user · CMA early adopter",
+  },
+  {
+    quote: "Having Follow Up Boss sync automatically means I’m not copying contacts between two systems anymore. Small thing, massive time savings.",
+    attribution: "Beta user · Follow Up Boss integration tester",
+  },
+];
+
 export function Proof() {
   const sectionRef = useRef<HTMLElement>(null);
 
@@ -30,14 +45,24 @@ export function Proof() {
             Now in private beta
           </p>
 
-          <blockquote className="font-display text-[28px] leading-snug text-ink md:text-[36px] md:leading-snug">
-            &ldquo;This is the first platform that told me something about my
-            business I didn&apos;t already know.&rdquo;
-          </blockquote>
-
-          <p className="mt-8 text-sm text-muted">
-            Beta user &middot; 11-year agent &middot; Los Angeles
-          </p>
+          <div className="space-y-12">
+            {testimonials.map((t, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: i * 0.1, ease }}
+              >
+                <blockquote className="font-display text-[22px] leading-snug text-ink md:text-[26px] md:leading-snug">
+                  &ldquo;{t.quote}&rdquo;
+                </blockquote>
+                <p className="mt-4 text-sm text-muted">
+                  {t.attribution}
+                </p>
+              </motion.div>
+            ))}
+          </div>
         </motion.div>
 
         <motion.div

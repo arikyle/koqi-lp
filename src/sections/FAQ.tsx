@@ -7,12 +7,27 @@ const faqs = [
   {
     question: "What is Koqi and how does it work?",
     answer:
-      "Koqi is a performance intelligence platform for real estate agents and brokerages. It measures the skills that actually predict outcomes: pricing accuracy, market knowledge, and confidence calibration. It distills them into one score called ACCS. Unlike CRM dashboards that track activity, Koqi tracks ability.",
+      "Koqi is a performance intelligence platform for real estate agents and brokerages. It measures pricing accuracy, market knowledge, and confidence calibration, then distills them into one score called ACCS. CRM dashboards track activity. Koqi tracks ability.",
   },
   {
     question: "What is the ACCS score?",
     answer:
       "ACCS stands for Agent Competency & Calibration Score. It combines five dimensions: pricing accuracy, confidence calibration, local specialization, property type expertise, and engagement consistency. Your score always reflects current form. It decays with inactivity, so it can't be gamed or inflated by past performance alone.",
+  },
+  {
+    question: "What is the CMA tool?",
+    answer:
+      "Koqi's CMA (Comparative Market Analysis) walks you through property valuation step by step: subject property lookup, comp selection, adjustments, risk assessment, and pricing scenarios. It uses live market data, scores comps by relevance, and feeds each CMA into your ACCS accuracy record. You get more precise each time you use it.",
+  },
+  {
+    question: "Does Koqi integrate with my CRM?",
+    answer:
+      "Koqi syncs bidirectionally with Follow Up Boss. Contacts, deals, notes, and call logs sync automatically. When you run a CMA, Koqi matches the client to your existing contacts and links or creates deals automatically. Your API key is encrypted at rest and sync logs show exactly what moved. More integrations are coming.",
+  },
+  {
+    question: "What does the AI coach do?",
+    answer:
+      "Koqi's AI coach has permissioned access to your contacts, deals, and MLS data. Ask it to find properties for a client, analyze a deal, or surface follow-up opportunities. It responds with interactive cards showing valuations and context. All data access is verified and authorized.",
   },
   {
     question: "How does Estimate-to-Earn work?",
@@ -27,7 +42,12 @@ const faqs = [
   {
     question: "How does Koqi help brokerages?",
     answer:
-      "Koqi gives brokerages data-driven visibility into agent performance. Not just who's closing deals, but who's actually skilled at pricing. Track ACCS trends across your entire team, identify coaching opportunities before they become attrition, and build a recruiting pitch backed by performance data your competitors can't match.",
+      "Koqi gives brokerages visibility into agent pricing skill, not only deal volume. Track ACCS trends across your team, identify coaching opportunities before they become attrition, and build a recruiting pitch backed by performance data your competitors can't match.",
+  },
+  {
+    question: "How is Koqi different from Zillow or Redfin for consumers?",
+    answer:
+      "Zillow and Redfin are advertising platforms that connect you with agents who pay for placement. Koqi matches you with agents based on verified performance data: pricing accuracy, local expertise, and property type specialization. No agent pays to appear. Valuations include confidence bands and expandable methodology. You see the data first, the agent second.",
   },
   {
     question: "What markets does Koqi cover?",
@@ -37,7 +57,7 @@ const faqs = [
   {
     question: "How is Koqi different from a real estate CRM?",
     answer:
-      "CRMs track activity: calls made, emails sent, appointments booked. Koqi measures skill. It answers a fundamentally different question: not 'how busy are you?' but 'how good are you?' Your ACCS score is an objective, verifiable measure of your pricing instincts and market expertise that no CRM can replicate.",
+      "CRMs track activity: calls made, emails sent, appointments booked. Koqi measures skill. Your ACCS score is an objective, verifiable measure of your pricing instincts and market expertise. No CRM captures that.",
   },
   {
     question: "Can I use my ACCS score for recruiting or marketing?",
@@ -60,8 +80,9 @@ export function FAQ() {
           {faqs.map((faq, i) => (
             <div key={i} role="listitem">
               <button
+                type="button"
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
-                aria-expanded={openIndex === i}
+                aria-expanded={openIndex === i ? "true" : "false"}
                 aria-controls={`faq-answer-${i}`}
                 className="flex w-full items-center justify-between py-6 text-left text-lg font-medium text-ink transition-colors hover:text-accent"
               >

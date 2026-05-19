@@ -38,10 +38,21 @@ export function FinalCTA() {
           transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
           className="relative text-center font-display text-[32px] leading-snug text-white sm:text-5xl md:text-[64px] md:leading-tight"
         >
-          You already know if you&apos;re good.
+          Your pricing instinct is an asset.
           <br />
-          Now prove it.
+          Start proving it.
         </motion.h2>
+
+        <motion.p
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
+          className="relative mt-6 max-w-md text-center text-lg leading-relaxed text-white/60"
+        >
+          Run your first CMA. Submit your first estimate.
+          See what your accuracy looks like.
+        </motion.p>
 
         <motion.div
           initial={{ opacity: 0, y: 16 }}
@@ -49,10 +60,10 @@ export function FinalCTA() {
           viewport={{ once: true }}
           transition={{
             duration: 0.6,
-            delay: 0.2,
+            delay: 0.3,
             ease: [0.22, 1, 0.36, 1],
           }}
-          className="relative mt-12 flex flex-col items-center"
+          className="relative mt-10 flex flex-col items-center"
         >
           <MagneticButton href="https://form.typeform.com/to/d7BbovyW" strength={0.3}>
             <span className="group relative inline-flex h-14 items-center overflow-hidden rounded-full bg-accent px-10 text-lg font-medium text-white transition-all duration-300 hover:shadow-[0_0_32px_rgba(42,157,143,0.4)]">
@@ -61,8 +72,11 @@ export function FinalCTA() {
             </span>
           </MagneticButton>
 
-          <p className="mt-6 text-sm text-white/60">
-            Free during beta. Your score starts building on day one.
+          <p className="mt-6 text-sm text-white/50">
+            Free during beta. No credit card. No commitment.
+          </p>
+          <p className="mt-1 text-sm text-white/40">
+            Your score starts building on day one.
           </p>
         </motion.div>
       </section>
@@ -70,9 +84,18 @@ export function FinalCTA() {
       <footer className="border-t border-stone-200 bg-stone-bg px-6 py-12">
         <div className="mx-auto max-w-4xl">
           <div className="flex flex-col items-center gap-6 sm:flex-row sm:justify-between">
-            <div className="flex items-center gap-6">
+            <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
               <a href="/" className="text-sm font-medium text-ink hover:text-accent transition-colors">
                 koqi.ai
+              </a>
+              <a href="/cma-tool" className="text-sm text-muted hover:text-accent transition-colors">
+                CMA Tool
+              </a>
+              <a href="/brokerages" className="text-sm text-muted hover:text-accent transition-colors">
+                For Brokerages
+              </a>
+              <a href="/consumers" className="text-sm text-muted hover:text-accent transition-colors">
+                For Consumers
               </a>
               <a href="/blog" className="text-sm text-muted hover:text-accent transition-colors">
                 Blog
@@ -93,6 +116,10 @@ export function FinalCTA() {
           </div>
           <p className="mt-6 text-center text-xs text-muted/60">
             &copy; {new Date().getFullYear()} Koqi. All rights reserved.
+          </p>
+          <p className="mt-2 text-center text-[10px] leading-relaxed text-muted/40">
+            Koqi performance scoring technology is patent pending.
+            Revenue participation via smart referral and commission tracking is covered by U.S. patent.
           </p>
         </div>
       </footer>

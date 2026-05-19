@@ -1,12 +1,16 @@
 import { Nav } from "@/components/Nav";
 import { Hero } from "@/sections/Hero";
 import { Tension } from "@/sections/Tension";
-import { Features } from "@/sections/Features";
-import { ProductGlimpse } from "@/sections/ProductGlimpse";
+import { CMA } from "@/sections/CMA";
+import { ACCSScore } from "@/sections/ACCSScore";
+import { FollowUpBoss } from "@/sections/FollowUpBoss";
+import { AICoach } from "@/sections/AICoach";
 import { Rewards } from "@/sections/Rewards";
+import { Territory } from "@/sections/Territory";
 import { Brokerage } from "@/sections/Brokerage";
+import { Consumer } from "@/sections/Consumer";
 import { Proof } from "@/sections/Proof";
-import { MobileShowcase } from "@/sections/MobileShowcase";
+import { HowItWorks } from "@/sections/HowItWorks";
 import { FAQ } from "@/sections/FAQ";
 import { FinalCTA } from "@/sections/FinalCTA";
 
@@ -17,12 +21,16 @@ export default function Home() {
       <main id="main">
         <Hero />
         <Tension />
-        <Features />
-        <ProductGlimpse />
+        <CMA />
+        <ACCSScore />
+        <FollowUpBoss />
+        <AICoach />
         <Rewards />
+        <Territory />
         <Brokerage />
+        <Consumer />
         <Proof />
-        <MobileShowcase />
+        <HowItWorks />
         <FAQ />
         <FinalCTA />
       </main>

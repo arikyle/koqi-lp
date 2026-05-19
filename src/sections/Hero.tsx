@@ -8,9 +8,9 @@ import { MagneticButton } from "@/components/MagneticButton";
 const headlineEase = [0.22, 1, 0.36, 1] as const;
 
 const headlines = [
-  { text: "The agents who close more", className: "text-[32px] sm:text-5xl md:text-7xl" },
-  { text: "don't work harder.", className: "text-[28px] sm:text-[42px] md:text-[64px]" },
-  { text: "They see more.", className: "text-[28px] sm:text-[42px] md:text-[64px]" },
+  { text: "The agents who price it right", className: "text-[32px] sm:text-5xl md:text-7xl" },
+  { text: "don’t guess.", className: "text-[28px] sm:text-[42px] md:text-[64px]" },
+  { text: "They know.", className: "text-[28px] sm:text-[42px] md:text-[64px]" },
 ];
 
 function FilmGrain() {
@@ -99,9 +99,9 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.9, ease: headlineEase }}
           className="max-w-[480px] text-lg leading-relaxed text-white/70"
         >
-          Koqi is a performance intelligence platform for real estate. It scores
-          your skills, sharpens your pricing instincts, and rewards you for
-          getting better.
+          Koqi is the performance platform for real estate.
+          Run comps that learn from your market. Score your pricing accuracy.
+          Get rewarded for getting sharper.
         </motion.p>
 
         <motion.div
@@ -116,8 +116,21 @@ export function Hero() {
             </span>
           </MagneticButton>
           <span className="mt-3 block text-sm text-white/40 sm:ml-4 sm:mt-0 sm:inline">
-            No credit card. No commitment.
+            Free during beta. No credit card required.
           </span>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 1.3, ease: headlineEase }}
+          className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-white/40"
+        >
+          <span>Powered by live MLS data</span>
+          <span className="hidden sm:inline" aria-hidden="true">|</span>
+          <span>Syncs with Follow Up Boss</span>
+          <span className="hidden sm:inline" aria-hidden="true">|</span>
+          <span>Launching in California</span>
         </motion.div>
       </motion.div>
 
