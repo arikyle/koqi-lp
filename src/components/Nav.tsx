@@ -140,7 +140,7 @@ export function Nav() {
           </div>
 
           <a
-            href="#"
+            href="https://app.koqi.ai"
             className={`text-sm font-medium transition-colors duration-300 ${
               scrolled
                 ? "text-ink hover:text-accent"
@@ -150,19 +150,23 @@ export function Nav() {
             Log In
           </a>
           <a
-            href="https://form.typeform.com/to/d7BbovyW"
+            href="https://apps.apple.com/app/koqi/id6761737958"
+            target="_blank"
+            rel="noopener noreferrer"
             className="rounded-full bg-accent px-5 py-2.5 text-sm font-medium text-white transition-opacity hover:opacity-90"
           >
-            Get Early Access
+            Download App
           </a>
         </div>
 
         <div className="flex items-center gap-4 md:hidden">
           <a
-            href="https://form.typeform.com/to/d7BbovyW"
+            href="https://apps.apple.com/app/koqi/id6761737958"
+            target="_blank"
+            rel="noopener noreferrer"
             className="rounded-full bg-accent px-4 py-2 text-sm font-medium text-white transition-opacity hover:opacity-90"
           >
-            Get Early Access
+            Download App
           </a>
           <button
             onClick={() => setMenuOpen(!menuOpen)}
@@ -232,7 +236,7 @@ export function Nav() {
             )}
 
             <a
-              href="#"
+              href="https://app.koqi.ai"
               className="text-lg text-white/50 transition-colors hover:text-white"
             >
               Log In

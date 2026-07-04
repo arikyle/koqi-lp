@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { MagneticButton } from "@/components/MagneticButton";
+import { AppStoreBadge, AppStoreBadgeLight } from "@/components/AppStoreBadge";
 
 export function FinalCTA() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -63,20 +64,18 @@ export function FinalCTA() {
             delay: 0.3,
             ease: [0.22, 1, 0.36, 1],
           }}
-          className="relative mt-10 flex flex-col items-center"
+          className="relative mt-10 flex flex-col items-center gap-5"
         >
+          <AppStoreBadge />
+
           <MagneticButton href="https://form.typeform.com/to/d7BbovyW" strength={0.3}>
-            <span className="group relative inline-flex h-14 items-center overflow-hidden rounded-full bg-accent px-10 text-lg font-medium text-white transition-all duration-300 hover:shadow-[0_0_32px_rgba(42,157,143,0.4)]">
-              <span className="relative z-10">Get Early Access</span>
-              <span className="absolute inset-0 bg-white/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+            <span className="text-sm font-medium text-white/50 transition-colors duration-300 hover:text-white/80">
+              Or request a demo &rarr;
             </span>
           </MagneticButton>
 
-          <p className="mt-6 text-sm text-white/50">
-            Free during beta. No credit card. No commitment.
-          </p>
-          <p className="mt-1 text-sm text-white/40">
-            Your score starts building on day one.
+          <p className="mt-2 text-sm text-white/40">
+            Free to download. Your score starts building on day one.
           </p>
         </motion.div>
       </section>
@@ -88,6 +87,7 @@ export function FinalCTA() {
               <a href="/" className="text-sm font-medium text-ink hover:text-accent transition-colors">
                 koqi.ai
               </a>
+              <AppStoreBadgeLight />
               <a href="/cma-tool" className="text-sm text-muted hover:text-accent transition-colors">
                 CMA Tool
               </a>

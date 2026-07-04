@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ScrollCue } from "@/components/ScrollCue";
 import { MagneticButton } from "@/components/MagneticButton";
+import { AppStoreBadge } from "@/components/AppStoreBadge";
 
 const headlineEase = [0.22, 1, 0.36, 1] as const;
 
@@ -108,16 +109,14 @@ export function Hero() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1.1, ease: headlineEase }}
-          className="mt-2"
+          className="mt-2 flex flex-col gap-4 sm:flex-row sm:items-center"
         >
+          <AppStoreBadge />
           <MagneticButton href="https://form.typeform.com/to/d7BbovyW" strength={0.25}>
-            <span className="inline-block rounded-full bg-accent px-8 py-3.5 text-base font-medium text-white transition-all duration-300 hover:shadow-[0_0_32px_rgba(42,157,143,0.4)]">
-              Get Early Access
+            <span className="inline-block rounded-full border border-white/20 px-8 py-3.5 text-base font-medium text-white/70 transition-all duration-300 hover:border-white/40 hover:text-white">
+              Request a Demo
             </span>
           </MagneticButton>
-          <span className="mt-3 block text-sm text-white/40 sm:ml-4 sm:mt-0 sm:inline">
-            Free during beta. No credit card required.
-          </span>
         </motion.div>
 
         <motion.div
@@ -130,7 +129,7 @@ export function Hero() {
           <span className="hidden sm:inline" aria-hidden="true">|</span>
           <span>Syncs with Follow Up Boss</span>
           <span className="hidden sm:inline" aria-hidden="true">|</span>
-          <span>Launching in California</span>
+          <span>Now on the App Store</span>
         </motion.div>
       </motion.div>
 
