@@ -14,7 +14,7 @@ export function AppStoreBadge() {
       href={APP_STORE_URL}
       target="_blank"
       rel="noopener noreferrer"
-      className="group inline-flex items-center gap-2.5 rounded-full border border-white/20 bg-white/5 px-6 py-3 backdrop-blur-sm transition-all duration-300 hover:border-white/40 hover:bg-white/10"
+      className="group inline-flex items-center gap-2.5 rounded-full border border-white/15 bg-black/60 px-6 py-3 backdrop-blur-md transition-all duration-300 hover:border-white/30 hover:bg-black/70"
     >
       <AppleIcon className="h-5 w-5 text-white" />
       <span className="flex flex-col leading-none">

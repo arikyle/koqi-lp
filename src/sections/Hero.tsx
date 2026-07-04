@@ -113,7 +113,7 @@ export function Hero() {
         >
           <AppStoreBadge />
           <MagneticButton href="https://form.typeform.com/to/d7BbovyW" strength={0.25}>
-            <span className="inline-block rounded-full border border-white/20 px-8 py-3.5 text-base font-medium text-white/70 transition-all duration-300 hover:border-white/40 hover:text-white">
+            <span className="inline-block rounded-full border border-white/15 bg-black/60 px-8 py-3.5 text-base font-medium text-white/70 backdrop-blur-md transition-all duration-300 hover:border-white/30 hover:bg-black/70 hover:text-white">
               Request a Demo
             </span>
           </MagneticButton>
@@ -123,13 +123,9 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 1.3, ease: headlineEase }}
-          className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-white/40"
+          className="mt-8 text-sm text-white/40"
         >
-          <span>Median error under 7%*</span>
-          <span className="hidden sm:inline" aria-hidden="true">|</span>
-          <span>Benchmarked against actual closing prices across California</span>
-          <span className="hidden sm:inline" aria-hidden="true">|</span>
-          <span>Accuracy verified monthly</span>
+          Median error under 7%* · Verified against real closing prices · Benchmarked monthly
         </motion.div>
       </motion.div>
 

@@ -12,7 +12,7 @@ const included = [
   "ACCS scoring across all five dimensions",
   "Unlimited CMA reports with live market data",
   "AI coach with CRM and MLS access",
-  "Follow Up Boss bidirectional sync",
+  "Follow Up Boss integration",
   "Estimate-to-Earn with GPS verification",
   "ZIP-level territory intelligence",
 ];

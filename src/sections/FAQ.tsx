@@ -22,7 +22,7 @@ const faqs = [
   {
     question: "Does Koqi integrate with my CRM?",
     answer:
-      "Koqi syncs bidirectionally with Follow Up Boss. Contacts, deals, notes, and call logs sync automatically. When you run a CMA, Koqi matches the client to your existing contacts and links or creates deals automatically. Your API key is encrypted at rest and sync logs show exactly what moved. More integrations are coming.",
+      "Koqi integrates with Follow Up Boss. Contacts, deals, notes, and call logs sync automatically. When you run a CMA, Koqi matches the client to your existing contacts and links or creates deals automatically. Your API key is encrypted at rest and sync logs show exactly what moved. More integrations are coming.",
   },
   {
     question: "What does the AI coach do?",

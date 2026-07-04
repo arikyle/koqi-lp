@@ -28,7 +28,7 @@ export function FollowUpBoss() {
 
             <div className="mt-8 space-y-4 text-lg leading-relaxed text-white/60">
               <p>
-                Koqi syncs bidirectionally with Follow Up Boss. Contacts, deals,
+                Koqi integrates with Follow Up Boss. Contacts, deals,
                 notes, and call logs flow in automatically.
               </p>
               <p>
