@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Terms of Use",
   description:
-    "Terms of Use for Koqi.ai platform — RealiFi Inc. terms governing use of the Koqi Sites and Services.",
+    "Terms of Use for Koqi.ai platform. RealiFi Inc. terms governing use of the Koqi Sites and Services.",
   alternates: {
     canonical: "https://koqi.ai/terms-of-use",
   },

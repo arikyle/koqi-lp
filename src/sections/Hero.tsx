@@ -102,7 +102,7 @@ export function Hero() {
         >
           Koqi is the performance platform for real estate.
           Run comps that learn from your market. Score your pricing accuracy.
-          Get rewarded for getting sharper.
+          Get sharper with every deal.
         </motion.p>
 
         <motion.div

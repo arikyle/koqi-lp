@@ -30,9 +30,9 @@ const faqs = [
       "Koqi's AI coach has permissioned access to your contacts, deals, and MLS data. Ask it to find properties for a client, analyze a deal, or surface follow-up opportunities. It responds with interactive cards showing valuations and context. All data access is verified and authorized.",
   },
   {
-    question: "How does Estimate-to-Earn work?",
+    question: "How do pricing estimates work?",
     answer:
-      "You submit GPS-verified pricing estimates on real properties listed in your market. After the property sells, Koqi compares your estimate to the final sale price. The closer you are, the more you earn. It's deliberate practice with real stakes. A pricing gym that rewards you for getting sharper.",
+      "You submit GPS-verified pricing estimates on real properties listed in your market. After the property sells, Koqi compares your estimate to the final sale price. Every estimate builds your accuracy record and sharpens your ACCS score. It turns the work you already do into deliberate practice.",
   },
   {
     question: "Is Koqi free to use?",

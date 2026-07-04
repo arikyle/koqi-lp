@@ -16,8 +16,8 @@ const features = [
     screen: { src: "/media/screen-accs-performance.png", alt: "ACCS Performance breakdown by category" },
   },
   {
-    title: "Get rewarded for sharpening your instincts",
-    body: "Submit GPS-verified pricing estimates on real properties in your market. The closer you are to reality, the more you earn. This isn’t a quiz. It’s a pricing gym.",
+    title: "Train your pricing instincts on real deals",
+    body: "Submit GPS-verified pricing estimates on real properties in your market. When they close, Koqi scores your accuracy. Every estimate sharpens your edge.",
     screen: { src: "/media/screen-estimate-form.png", alt: "GPS-verified property estimate submission" },
   },
   {

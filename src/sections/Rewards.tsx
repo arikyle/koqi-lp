@@ -21,7 +21,7 @@ export function Rewards() {
         className="relative max-w-[640px] text-center"
       >
         <h2 className="font-display text-[28px] leading-snug text-white sm:text-4xl md:text-[56px] md:leading-tight">
-          A pricing gym that pays you to train.
+          Sharpen your pricing instincts on every deal.
         </h2>
         <p className="mt-2 text-xs text-white/30">Patented technology</p>
 
@@ -32,13 +32,12 @@ export function Rewards() {
             actual sale price.
           </p>
           <p>
-            Closer estimates earn more. Your accuracy record is permanent --
-            and once a listing goes active, your estimate locks. No backdating.
-            No adjusting after you see the listing price.
+            Every estimate builds your accuracy record. Once a listing goes
+            active, your estimate locks. No backdating. No adjusting after
+            you see the listing price.
           </p>
           <p className="text-white/80">
-            Trust built transparently, over time, with
-            outcomes you can&apos;t manipulate.
+            Deliberate practice built into the work you already do.
           </p>
         </div>
 

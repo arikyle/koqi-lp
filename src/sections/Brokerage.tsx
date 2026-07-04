@@ -83,7 +83,7 @@ export function Brokerage() {
           <div className="mt-8 space-y-4 text-lg leading-relaxed text-white/75">
             <p>
               The best agents don&apos;t need another pep talk. They need a brokerage
-              that sees their work clearly and rewards it measurably.
+              that sees their work clearly and measures it objectively.
             </p>
             <p className="text-white">
               Koqi gives you the scoreboard your recruiting pitch has been missing.

@@ -13,14 +13,14 @@ const included = [
   "Unlimited CMA reports with live market data",
   "AI coach with CRM and MLS access",
   "Follow Up Boss integration",
-  "Estimate-to-Earn with GPS verification",
+  "GPS-verified pricing estimates",
   "ZIP-level territory intelligence",
 ];
 
 const tiers = [
   {
     name: "Agents",
-    description: "Performance scoring, CMA tool, AI coaching, and Estimate-to-Earn for individual agents.",
+    description: "Performance scoring, CMA tool, AI coaching, and GPS-verified pricing estimates for individual agents.",
     status: "Free during beta",
   },
   {

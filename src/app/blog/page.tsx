@@ -3,14 +3,14 @@ import Link from "next/link";
 import { getAllPosts, getAllCategories } from "@/lib/blog";
 
 export const metadata: Metadata = {
-  title: "Blog — Real Estate Performance Intelligence Insights",
+  title: "Blog | Real Estate Performance Intelligence Insights",
   description:
     "Expert insights on real estate agent performance metrics, pricing accuracy, ACCS scores, brokerage analytics, and the future of performance intelligence in real estate.",
   alternates: {
     canonical: "https://koqi.ai/blog",
   },
   openGraph: {
-    title: "Koqi Blog — Real Estate Performance Intelligence",
+    title: "Koqi Blog | Real Estate Performance Intelligence",
     description:
       "Expert insights on agent performance metrics, pricing accuracy, and brokerage analytics.",
     url: "https://koqi.ai/blog",

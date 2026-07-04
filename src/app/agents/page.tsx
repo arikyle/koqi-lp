@@ -19,9 +19,9 @@ const valueProps = [
   },
   {
     number: "02",
-    title: "Get rewarded for sharpening your instincts",
+    title: "Train your pricing instincts on real deals",
     description:
-      "Submit GPS-verified pricing estimates on real properties in your market. The closer you are to reality, the more you earn. This isn't a quiz. It's a pricing gym that rewards you for getting sharper.",
+      "Submit GPS-verified pricing estimates on real properties in your market. When they close, Koqi scores your accuracy. Every estimate sharpens your edge and builds a track record no competitor can fake.",
   },
   {
     number: "03",
@@ -147,7 +147,7 @@ export default function AgentsPage() {
                   One number that proves what you&apos;re worth.
                 </h2>
                 <p className="mt-6 text-lg leading-relaxed text-muted">
-                  Transaction count says you&apos;re busy. GCI says you earn.
+                  Transaction count says you&apos;re busy. GCI says you close.
                   Neither says you&apos;re{" "}
                   <em className="text-ink">good</em>. ACCS does. It measures
                   pricing accuracy, confidence calibration, local expertise,
@@ -237,7 +237,7 @@ export default function AgentsPage() {
                     { src: "/media/screen-estimates.png", alt: "Estimates" },
                     { src: "/media/screen-estimate-form.png", alt: "Estimate Form" },
                   ],
-                  label: "Estimate & Earn",
+                  label: "Estimate & Train",
                   interval: 4000,
                 },
                 {

@@ -12,6 +12,213 @@ export interface BlogPost {
 
 const posts: BlogPost[] = [
   {
+    slug: "how-accurate-are-automated-home-valuations",
+    title: "How Accurate Are Automated Home Valuations? What the Data Actually Shows",
+    description:
+      "Automated valuation models (AVMs) like Zestimates hit a wall around 7% error. Here is what causes that ceiling and how agent-input CMAs cut it nearly in half.",
+    datePublished: "2026-06-18",
+    category: "Industry",
+    tags: ["AVM accuracy", "home valuation", "Zestimate", "CMA", "pricing accuracy"],
+    readingTime: "6 min read",
+    content: `## The 7% Wall
+
+Automated valuation models, the algorithms behind Zillow's Zestimate, Redfin Estimate, and similar tools, have improved significantly over the past decade. But they all hit the same ceiling: roughly 7% median error on off-market properties.
+
+That number holds remarkably consistent across providers and geographies. Zillow self-reports a median error of around 7.5% for off-market homes. Third-party analyses confirm similar ranges for Redfin, Realtor.com, and HouseCanary.
+
+Seven percent sounds reasonable in the abstract. On a $900,000 home, it means the algorithm's estimate could be off by $63,000 in either direction. For a seller deciding on a list price, or a buyer deciding whether to make an offer, that range is too wide to be actionable.
+
+## Why AVMs Hit This Ceiling
+
+The accuracy ceiling exists because of what algorithms cannot see.
+
+**Condition.** An AVM knows the square footage, lot size, year built, and bedroom count. It does not know whether the kitchen was renovated in 2024 or 1994. It cannot see deferred maintenance, a cracked foundation, or a backyard that backs up to a freeway. Condition accounts for a significant portion of value variation between otherwise comparable homes, and no algorithm can assess it from data alone.
+
+**Renovation quality.** Two homes with "updated kitchens" can differ by $50,000 in value depending on the quality of finishes, layout changes, and whether the work was permitted. An AVM treats both the same.
+
+**Market positioning.** Is this home a teardown candidate in a hot land-value neighborhood, or a lovingly maintained family home? The answer changes the valuation approach entirely. AVMs lack the contextual judgment to make this distinction.
+
+**Hyperlocal factors.** The house next to the park is worth more than the house next to the parking lot, even on the same street. AVMs use location data at the parcel level, but they cannot evaluate view quality, noise levels, neighbor aesthetics, or street feel.
+
+## What Happens When You Add Agent Input
+
+When a knowledgeable agent rates a property's condition and market position before running a valuation, accuracy improves dramatically.
+
+In benchmarks across California markets, adding a 30-second agent condition rating to the valuation engine cut median error to under 7%, verified against actual closing prices rather than list prices. That one input, the thing only a person who has seen the property can provide, was the difference.
+
+This is not a surprise to anyone who works in real estate. The surprise is that no major platform had systematically measured the impact of combining algorithmic precision with human judgment. The data confirms what agents have always known: the algorithm needs them.
+
+## What This Means for Agents
+
+The AVM accuracy ceiling is good news for agents. It means the market cannot be fully automated. The properties that AVMs struggle with most (renovated homes, unusual properties, transitioning neighborhoods) are exactly the properties where skilled agents add the most value.
+
+An agent who can demonstrate pricing accuracy that beats the algorithm has a powerful differentiator. Not by rejecting technology, but by combining it with the expertise that only comes from walking through homes and understanding local markets.
+
+## What This Means for Consumers
+
+If you are buying or selling a home, an automated estimate is a starting point, not an answer. The Zestimate on your property might be off by $60,000 or more, and you have no way of knowing in which direction.
+
+A comparative market analysis prepared by an agent who has evaluated the property's condition, reviewed the true comparables, and applied local market knowledge will be significantly more accurate. The data shows that the combination of technology and human expertise consistently outperforms either one alone.
+
+## The Bottom Line
+
+AVMs are useful for broad market awareness, but they are not precise enough for pricing decisions. The 7% error wall is structural, not a temporary limitation that will be solved with more data or better algorithms. The missing input is human judgment, and the agents who provide it are the ones delivering real accuracy.`,
+  },
+  {
+    slug: "how-to-run-a-cma-that-holds-up",
+    title: "How to Run a CMA That Actually Holds Up at the Kitchen Table",
+    description:
+      "Most CMAs are comp dumps that fall apart under client scrutiny. Here is how to build a CMA that earns trust: structured adjustments, honest confidence ranges, and defensible methodology.",
+    datePublished: "2026-05-22",
+    category: "Education",
+    tags: ["CMA", "comparative market analysis", "listing presentation", "pricing strategy"],
+    readingTime: "7 min read",
+    content: `## The Kitchen Table Test
+
+A CMA lives or dies at the kitchen table. It is the moment when a seller looks at your number, looks at the Zestimate on their phone, and decides whether to trust your expertise or the algorithm.
+
+Most CMAs fail this test. Not because the number is wrong, but because the methodology is invisible. The seller sees a list of comps and a suggested price. They do not see how you got there. They do not see why you chose those comps over others. They do not see the adjustments, the reasoning, or the confidence level.
+
+A CMA that holds up is one the seller can follow, question, and ultimately trust because the logic is transparent.
+
+## Step 1: Start with the Subject, Not the Comps
+
+The most common CMA mistake is starting with comparables. Agents pull comps first, then back into a price. This inverts the process and invites anchoring bias.
+
+Start with the subject property. Assess its condition. Rate it honestly: excellent, good, average, fair, or below. Note specific features that add or subtract value: updated systems, deferred maintenance, lot characteristics, noise exposure, view quality.
+
+This assessment becomes the lens through which you evaluate every comp. Without it, you are comparing properties on paper characteristics alone, which is exactly what AVMs do and exactly why they hit the 7% error wall.
+
+## Step 2: Select Comps with Discipline
+
+Three to six comparables is the right range. More than six dilutes the analysis. Fewer than three lacks statistical support.
+
+Selection criteria, in order of priority:
+
+**Proximity.** Same neighborhood first. Same school zone second. Same city is a last resort and should be flagged as such.
+
+**Recency.** Sales within 90 days carry the most weight. Sales within 180 days are acceptable with market adjustment. Anything older requires explicit justification.
+
+**Similarity.** Match on the characteristics that drive value in your market. In some areas, lot size dominates. In others, bedroom count or school proximity matters more. Know which variables your market prices most heavily.
+
+**Arms-length transactions.** Exclude foreclosures, estate sales, and family transfers unless the market is dominated by distressed sales, in which case they are the market.
+
+## Step 3: Adjust with Precision
+
+Raw comp prices are not the answer. Adjustments are. And adjustments are where most CMAs fall apart.
+
+Common adjustment categories:
+
+**Condition.** The biggest single adjustment in most CMAs. A comp that sold in excellent condition versus your subject in good condition requires a downward adjustment to the comp's price. Many agents skip this or eyeball it. The best agents quantify it.
+
+**Size.** Price per square foot is a useful reference but not a direct adjustment factor. A 3,000 square foot home does not sell for exactly 50% more than a 2,000 square foot home. Marginal value per square foot declines as homes get larger.
+
+**Lot characteristics.** Corner lots, cul-de-sacs, busy street adjacency, and grade all affect value. These adjustments are hyperlocal and require market knowledge that no algorithm can replicate.
+
+**Market conditions.** If the market has appreciated 4% since a comp closed six months ago, that comp needs a time adjustment. This is where many CMAs go wrong: they use stale comps without accounting for price movement.
+
+## Step 4: Show Your Confidence, Honestly
+
+Every CMA should include a confidence assessment. Not just a single number, but a range and an explanation.
+
+"Based on six recent comparable sales with adjustments, I estimate this home's market value between $865,000 and $895,000. My recommended list price is $885,000. My confidence in this range is high because three of the six comps are within a quarter mile and closed within 60 days."
+
+This does three things. It demonstrates analytical rigor. It sets realistic expectations. And it gives the seller a framework for understanding the inevitable gap between your estimate and their Zestimate.
+
+## Step 5: Address the Algorithm in the Room
+
+Every seller has checked their Zestimate before you arrive. Do not ignore it. Address it directly.
+
+"The Zestimate on your home is $905,000. That estimate is based on public data without any assessment of your home's condition, the quality of your renovations, or the specific characteristics of your lot. Automated valuations carry a median error of around 7% for off-market homes. On your home, that means the algorithm could be off by roughly $63,000 in either direction. My CMA is based on comparable sales I have personally reviewed, with adjustments for the specific characteristics of your home."
+
+This is not a sales pitch. It is an honest explanation of the difference between algorithmic estimates and professional analysis. The sellers who value accuracy will trust your number. The ones who want to hear the highest number will list with someone else, and you are better off without that listing.
+
+## The Koqi Approach
+
+Koqi's CMA tool automates the mechanical parts of this process (comp selection, appreciation calculations, market trends) while requiring the human inputs that matter (condition rating, market positioning). The result is a CMA that is both data-rich and judgment-informed.
+
+Every CMA you run feeds your ACCS score. When the property eventually sells, Koqi compares your estimate to the actual closing price. Over time, you build a verified accuracy record that turns your next kitchen table presentation from "trust me" into "here is my track record."`,
+  },
+  {
+    slug: "choosing-a-real-estate-agent-in-2026",
+    title: "How to Choose a Real Estate Agent in 2026: What Actually Matters",
+    description:
+      "Reviews, transaction count, and years of experience are unreliable signals of agent quality. Here is what to look for instead, and the one question you should always ask.",
+    datePublished: "2026-06-03",
+    category: "Consumer",
+    tags: ["choosing an agent", "home buying", "home selling", "agent quality", "consumer guide"],
+    readingTime: "6 min read",
+    content: `## The Old Playbook Is Broken
+
+For decades, choosing a real estate agent followed the same script: ask friends for a referral, check online reviews, maybe interview two or three candidates. Pick the one who seems most knowledgeable, most professional, most likable.
+
+This approach made sense when agents were the only source of market information. Today, buyers and sellers have access to the same listing data, market reports, and neighborhood stats that agents do. The information advantage is gone. What remains is judgment: the ability to accurately price a property, negotiate effectively, and guide a transaction to a successful close.
+
+The question is no longer "does this agent know the market?" Everyone has the data. The question is "can this agent interpret it better than the alternatives?"
+
+That question is harder to answer than it sounds.
+
+## Why the Usual Signals Are Unreliable
+
+### Online Reviews
+
+Five-star reviews are a marketing channel. Agents actively solicit reviews from happy clients and the process naturally filters out negative experiences. A 4.9-star rating with 200 reviews tells you the agent is good at asking for reviews. It tells you very little about their pricing accuracy or negotiation skill.
+
+This does not mean reviews are worthless. An agent with consistently poor reviews has a problem. But the difference between a 4.7 and a 4.9 is noise, not signal.
+
+### Transaction Count
+
+Closing 40 transactions a year means the agent is busy. It does not mean they are skilled. In a hot market, a licensed agent with a phone and a pulse can close deals. When the market shifts, the agents who succeeded through volume rather than skill are the first to struggle.
+
+Transaction count also reveals nothing about pricing accuracy. An agent who overprices half their listings still closes those deals eventually, just at a lower price after weeks of price reductions. The seller never knows what they lost.
+
+### Years of Experience
+
+Twenty years of experience can mean twenty years of improving expertise. It can also mean one year of experience repeated twenty times. Without performance data, you cannot tell the difference.
+
+The research on expertise is clear: time alone does not produce improvement. Deliberate practice with structured feedback produces improvement. An agent with five years of experience who actively practices pricing will outperform an agent with twenty years who relies on instinct alone.
+
+## What Actually Matters
+
+### Pricing Accuracy
+
+This is the single most important factor in choosing a real estate agent. An agent who prices your home correctly from day one will sell it faster, for more money, and with less stress than an agent who starts high and reduces.
+
+The problem has always been that pricing accuracy was invisible. No platform tracked it. No credential measured it. You had to take the agent's word for it.
+
+That is changing. Koqi's ACCS score tracks pricing accuracy at the individual agent level, verified against actual closing prices. For the first time, you can see how close an agent's estimates have been to real outcomes.
+
+### Local Depth
+
+An agent who is accurate in Pacific Heights may be mediocre in the Sunset District. Market knowledge is hyperlocal. The agent you want is the one with demonstrated accuracy in your specific neighborhood, not just your city.
+
+Ask for ZIP-level performance data. An agent who can show you their track record in your area is worth more than an agent with a citywide reputation and no local proof.
+
+### Honest Communication
+
+Pay attention to how the agent handles uncertainty. A skilled agent will tell you when they are confident and when they are less sure. They will give you a range, not just a number. They will explain their reasoning rather than just presenting a conclusion.
+
+An agent who is certain about everything is either overconfident or telling you what you want to hear. Neither is a good sign.
+
+## The One Question to Ask
+
+If you ask a prospective agent only one question, make it this:
+
+**"What is your track record on initial pricing accuracy?"**
+
+An agent who can answer with data has earned your attention. An agent who deflects to testimonials, experience, or marketing plans is telling you they do not track the metric that matters most.
+
+This question is not unfair. It is not adversarial. It is the same type of question you would ask a surgeon ("what is your success rate for this procedure?") or a financial advisor ("what have your clients' returns looked like?").
+
+The real estate industry has avoided this level of accountability for a long time. The agents who welcome it are the ones worth hiring.
+
+## Looking Ahead
+
+The gap between agents who can prove their skill and agents who cannot will widen in the coming years. Consumer platforms will surface performance data. Clients will learn to ask for it. The agents who start building a verified track record now will have a compounding advantage.
+
+If you are choosing an agent today, look for the ones who measure themselves. They are the ones who take the work seriously enough to want proof that they are good at it.`,
+  },
+  {
     slug: "what-is-accs-agent-competency-calibration-score",
     title: "What Is ACCS? The Agent Competency & Calibration Score Explained",
     description:
@@ -58,13 +265,13 @@ For consumers, ACCS is a trust signal. When choosing between agents, a high ACCS
 Koqi is currently in private beta. Early access members start building their ACCS score from day one, giving them a head start on establishing a verified performance profile.`,
   },
   {
-    slug: "estimate-to-earn-how-real-estate-agents-get-paid-to-practice",
-    title: "Estimate-to-Earn: How Real Estate Agents Get Rewarded for Practicing Pricing",
+    slug: "how-pricing-estimates-build-your-track-record",
+    title: "How GPS-Verified Pricing Estimates Build Your Track Record",
     description:
-      "Koqi's Estimate-to-Earn system rewards agents for accurate property pricing estimates. Learn how this pricing gym sharpens instincts and builds your ACCS score.",
+      "Koqi's pricing estimate system turns the work you already do into deliberate practice. Learn how submitting estimates sharpens your instincts and builds your ACCS score.",
     datePublished: "2026-03-28",
     category: "Product",
-    tags: ["Estimate-to-Earn", "pricing accuracy", "agent training"],
+    tags: ["pricing estimates", "pricing accuracy", "agent training"],
     readingTime: "4 min read",
     content: `## The Problem with Real Estate Training
 
@@ -74,9 +281,9 @@ Think about it. A buyer's biggest fear is overpaying. A seller's biggest fear is
 
 Yet there's been no structured way to practice this skill. Until now.
 
-## How Estimate-to-Earn Works
+## How Pricing Estimates Work
 
-Koqi's Estimate-to-Earn system turns pricing practice into a rewarded activity:
+Koqi turns the pricing work you already do into structured, trackable practice:
 
 **Step 1: Choose a Property**
 Browse real, active listings in your market. Koqi serves up properties based on your location and specialization areas.
@@ -87,12 +294,12 @@ Estimate what you think the property will sell for. Your estimate is GPS-verifie
 **Step 3: Wait for the Outcome**
 When the property sells, Koqi compares your estimate to the final sale price.
 
-**Step 4: Earn Based on Accuracy**
-The closer your estimate to the actual sale price, the more you earn. Consistently accurate estimates build your ACCS score and unlock higher reward tiers.
+**Step 4: Build Your Record**
+Every estimate feeds your ACCS score. Over time, you build a verified accuracy record that no competitor can fake.
 
 ## Why This Matters
 
-Estimate-to-Earn isn't a quiz or a game. It's deliberate practice with real stakes. The same type of training that elite performers in every field use to maintain their edge.
+This is not a quiz or a game. It is deliberate practice built into the work you already do. The same type of training that elite performers in every field use to maintain their edge.
 
 Every estimate you submit is a data point that feeds your ACCS score. Over time, Koqi builds a comprehensive map of your pricing strengths: which property types you nail, which neighborhoods you dominate, and where you have room to improve.
 
@@ -100,7 +307,7 @@ Every estimate you submit is a data point that feeds your ACCS score. Over time,
 
 Athletes don't just play games to get better. They train. They drill. They put in reps.
 
-Real estate agents should do the same. Estimate-to-Earn is the pricing gym. A structured environment where you sharpen your instincts on real properties, with real consequences for accuracy.
+Real estate agents should do the same. Koqi's estimate system is the pricing gym: a structured environment where you sharpen your instincts on real properties, with real consequences for accuracy.
 
 The agents who practice deliberately will outperform agents who rely on gut feel alone. The data is clear on this across every performance domain, and real estate is no exception.`,
   },

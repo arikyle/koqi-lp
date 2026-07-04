@@ -30,11 +30,11 @@ const SITE_URL = "https://koqi.ai";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Koqi — Performance Intelligence for Real Estate Agents",
+    default: "Koqi | Performance Intelligence for Real Estate Agents",
     template: "%s | Koqi",
   },
   description:
-    "Koqi quantifies real estate agent skill with the ACCS score, rewards accurate pricing estimates, and gives brokerages data-driven visibility into agent performance. Free during beta.",
+    "Koqi quantifies real estate agent skill with the ACCS score, sharpens pricing accuracy through deliberate practice, and gives brokerages data-driven visibility into agent performance. Free during beta.",
   keywords: [
     "real estate agent performance",
     "agent performance score",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     "brokerage performance analytics",
     "real estate intelligence platform",
     "agent skill assessment",
-    "estimate to earn",
+    "pricing practice",
     "real estate agent ranking",
     "pricing instinct training",
     "real estate agent improvement",
@@ -75,9 +75,9 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Koqi — Performance Intelligence for Real Estate Agents",
+    title: "Koqi | Performance Intelligence for Real Estate Agents",
     description:
-      "Koqi quantifies agent skill, rewards pricing accuracy, and gives brokerages real visibility into who is actually good. Free during beta.",
+      "Koqi quantifies agent skill, sharpens pricing accuracy, and gives brokerages real visibility into who is actually good. Free during beta.",
     url: SITE_URL,
     siteName: "Koqi",
     type: "website",
@@ -93,9 +93,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Koqi — Performance Intelligence for Real Estate",
+    title: "Koqi | Performance Intelligence for Real Estate",
     description:
-      "Quantify your real estate skills. Sharpen your pricing instincts. Get rewarded for improving.",
+      "Quantify your real estate skills. Sharpen your pricing instincts. Get better with every deal.",
     images: ["/Dashboard.png"],
     creator: "@koqiai",
   },
