@@ -48,7 +48,7 @@ export function Hero() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative flex h-screen w-full items-end overflow-hidden">
+    <section ref={sectionRef} className="relative flex h-screen w-full items-center overflow-hidden md:items-end">
       <motion.div
         className="absolute inset-0"
         style={{ scale: videoScale }}
@@ -68,12 +68,12 @@ export function Hero() {
 
       <FilmGrain />
 
-      <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-black/20 md:from-black/50 md:via-black/20 md:to-transparent" />
       <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-transparent to-transparent" />
       <motion.div className="absolute inset-0 bg-black" style={{ opacity: overlayOpacity }} />
 
       <motion.div
-        className="relative z-10 flex flex-col gap-6 p-10 pb-24 md:p-20 md:pb-28"
+        className="relative z-10 flex flex-col gap-6 p-8 md:p-20 md:pb-28"
         style={{ y: contentY, opacity: contentOpacity }}
       >
         <div className="flex flex-col gap-0">
@@ -98,7 +98,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.9, ease: headlineEase }}
-          className="max-w-[480px] text-lg leading-relaxed text-white/70"
+          className="max-w-[480px] text-lg leading-relaxed text-white/90"
         >
           Koqi is the performance platform for real estate.
           Run comps that learn from your market. Score your pricing accuracy.
@@ -109,7 +109,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1.1, ease: headlineEase }}
-          className="mt-2 flex flex-col gap-4 sm:flex-row sm:items-center"
+          className="mt-2 flex flex-col items-start gap-4 sm:flex-row sm:items-center"
         >
           <AppStoreBadge />
           <MagneticButton href="https://form.typeform.com/to/d7BbovyW" strength={0.25}>
@@ -123,7 +123,7 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 1.3, ease: headlineEase }}
-          className="mt-8 text-sm text-white/40"
+          className="mt-8 text-sm text-white/60"
         >
           Median error under 7%* · Verified against real closing prices · Benchmarked monthly
         </motion.div>
