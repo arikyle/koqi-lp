@@ -46,6 +46,16 @@ body {
   to { --hero-angle: 575deg; }
 }
 
+@media (max-width: 767px) {
+  main {
+    scroll-snap-type: y proximity;
+  }
+
+  main > section {
+    scroll-snap-align: start;
+  }
+}
+
 html.lenis,
 html.lenis body {
   height: auto;
