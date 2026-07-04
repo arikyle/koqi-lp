@@ -49,7 +49,9 @@ export function CMA() {
             Most CMA tools spit out comps and leave you to figure out the rest.
             Koqi&apos;s CMA walks you through pricing like a seasoned mentor,
             adjusting for condition, calculating appreciation, flagging risk,
-            and learning from each deal that closes.
+            and learning from each deal that closes. You rate condition and
+            market position in 30 seconds — that one input nearly cuts the
+            engine&apos;s error in half.
           </p>
         </motion.div>
 

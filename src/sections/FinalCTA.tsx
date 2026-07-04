@@ -121,6 +121,11 @@ export function FinalCTA() {
             Koqi performance scoring technology is patent pending.
             Revenue participation via smart referral and commission tracking is covered by U.S. patent.
           </p>
+          <p className="mt-2 text-center text-[10px] leading-relaxed text-muted/40">
+            *Accuracy measured against actual closing prices across California markets
+            with agent condition input provided. Individual results vary by market and
+            data availability. Benchmarked monthly against closed sales.
+          </p>
         </div>
       </footer>
     </>

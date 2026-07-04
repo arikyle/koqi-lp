@@ -125,11 +125,11 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 1.3, ease: headlineEase }}
           className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-white/40"
         >
-          <span>Powered by live MLS data</span>
+          <span>Median error under 7%*</span>
           <span className="hidden sm:inline" aria-hidden="true">|</span>
-          <span>Syncs with Follow Up Boss</span>
+          <span>Benchmarked against actual closing prices across California</span>
           <span className="hidden sm:inline" aria-hidden="true">|</span>
-          <span>Now on the App Store</span>
+          <span>Accuracy verified monthly</span>
         </motion.div>
       </motion.div>
 
