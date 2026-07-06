@@ -81,45 +81,28 @@ export function FinalCTA() {
       </section>
 
       <footer className="border-t border-stone-200 bg-stone-bg px-6 py-12">
-        <div className="mx-auto max-w-4xl">
-          <div className="flex flex-col items-center gap-6 sm:flex-row sm:justify-between">
-            <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
-              <a href="/" className="text-sm font-medium text-ink hover:text-accent transition-colors">
-                koqi.ai
-              </a>
-              <AppStoreBadgeLight />
-              <a href="/cma-tool" className="text-sm text-muted hover:text-accent transition-colors">
-                CMA Tool
-              </a>
-              <a href="/brokerages" className="text-sm text-muted hover:text-accent transition-colors">
-                For Brokerages
-              </a>
-              <a href="/consumers" className="text-sm text-muted hover:text-accent transition-colors">
-                For Consumers
-              </a>
-              <a href="/blog" className="text-sm text-muted hover:text-accent transition-colors">
-                Blog
-              </a>
-              <a href="#faq" className="text-sm text-muted hover:text-accent transition-colors">
-                FAQ
-              </a>
-              <a href="/privacy-policy" className="text-sm text-muted hover:text-accent transition-colors">
-                Privacy
-              </a>
-              <a href="/terms-of-use" className="text-sm text-muted hover:text-accent transition-colors">
-                Terms
-              </a>
-            </div>
-            <a href="mailto:hello@koqi.ai" className="text-sm text-muted hover:text-accent transition-colors">
-              hello@koqi.ai
+        <div className="mx-auto max-w-4xl flex flex-col items-center gap-6">
+          <div className="flex items-center gap-4">
+            <a href="/" className="text-sm font-medium text-ink hover:text-accent transition-colors">
+              koqi.ai
             </a>
+            <AppStoreBadgeLight />
           </div>
+          <nav className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm text-muted">
+            <a href="/cma-tool" className="hover:text-accent transition-colors">CMA Tool</a>
+            <a href="/brokerages" className="hover:text-accent transition-colors">Brokerages</a>
+            <a href="/consumers" className="hover:text-accent transition-colors">Consumers</a>
+            <a href="/blog" className="hover:text-accent transition-colors">Blog</a>
+            <a href="#faq" className="hover:text-accent transition-colors">FAQ</a>
+            <a href="/privacy-policy" className="hover:text-accent transition-colors">Privacy</a>
+            <a href="/terms-of-use" className="hover:text-accent transition-colors">Terms</a>
+            <a href="mailto:hello@koqi.ai" className="hover:text-accent transition-colors">hello@koqi.ai</a>
+          </nav>
           <p className="mt-6 text-center text-xs text-muted/60">
             &copy; {new Date().getFullYear()} Koqi. All rights reserved.
           </p>
           <p className="mt-2 text-center text-[10px] leading-relaxed text-muted/40">
             Koqi performance scoring technology is patent pending.
-            Revenue participation via smart referral and commission tracking is covered by U.S. patent.
           </p>
           <p className="mt-2 text-center text-[10px] leading-relaxed text-muted/40">
             *Accuracy measured against actual closing prices across California markets
