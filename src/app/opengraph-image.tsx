@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
 export const alt = "Koqi — The performance OS for real estate";
-export const size = { width: 1200, height: 630 };
+export const size = { width: 2400, height: 1260 };
 export const contentType = "image/png";
 
 const SITE = "https://koqi.ai";
@@ -51,12 +51,12 @@ export default async function Image() {
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
-            paddingLeft: 80,
-            width: 420,
+            paddingLeft: 160,
+            width: 840,
             flexShrink: 0,
           }}
         >
-          <svg viewBox="0 0 1080 1080" width="150" height="150">
+          <svg viewBox="0 0 1080 1080" width="300" height="300">
             <g fill="#2A9D8F">
               <path d="M265.3,86.13s-13.63-1.43-13.63,13.15v343.59l168.81-171.92V97.13s.92-10.18-10.18-10.18-145-.82-145-.82Z" />
               <path d="M613.23,91.73s3.74-5.61,8.73-5.82,180.77,0,180.77,0c0,0,6.86-1.45,6.65,5.82-.21,7.27-238.82,242.87-238.82,242.87,0,0-11.17,10.24,0,21.42,11.17,11.17,241.31,246.34,241.31,246.34,0,0,6.11,5.12,6.11,9.17s.22,7.35-5.95,7.35h-165.42l-173.04-176s-7.83-8.46-16.29,0-172.26,176-172.26,176h-24.9s-9.22,1.7-9.22-9.22v-144.83L613.23,91.73Z" />
@@ -73,12 +73,12 @@ export default async function Image() {
             style={{
               display: "flex",
               flexDirection: "column",
-              marginTop: 20,
+              marginTop: 40,
             }}
           >
             <span
               style={{
-                fontSize: 24,
+                fontSize: 48,
                 fontWeight: 500,
                 color: "rgba(255,255,255,0.4)",
                 letterSpacing: "-0.01em",
@@ -88,7 +88,7 @@ export default async function Image() {
             </span>
             <span
               style={{
-                fontSize: 24,
+                fontSize: 48,
                 fontWeight: 500,
                 color: "rgba(255,255,255,0.4)",
                 letterSpacing: "-0.01em",
@@ -113,32 +113,32 @@ export default async function Image() {
           <div
             style={{
               position: "absolute",
-              left: 120,
-              top: 95,
+              left: 310,
+              top: 200,
               display: "flex",
-              width: 160,
-              height: 346,
-              borderRadius: 26,
+              width: 320,
+              height: 692,
+              borderRadius: 52,
               background: "#1A1A1A",
-              padding: 3,
+              padding: 6,
               transform: "rotate(-6deg)",
               boxShadow:
-                "0 25px 60px rgba(0,0,0,0.7), 0 0 0 1px rgba(255,255,255,0.06)",
+                "0 50px 120px rgba(0,0,0,0.7), 0 0 0 2px rgba(255,255,255,0.06)",
             }}
           >
             <div
               style={{
                 display: "flex",
-                width: 154,
-                height: 340,
-                borderRadius: 23,
+                width: 308,
+                height: 680,
+                borderRadius: 46,
                 overflow: "hidden",
               }}
             >
               <img
                 src={`${SITE}/media/screen-cma-report.png`}
-                width={154}
-                height={340}
+                width={308}
+                height={680}
                 style={{ objectFit: "cover" }}
               />
             </div>
@@ -148,32 +148,32 @@ export default async function Image() {
           <div
             style={{
               position: "absolute",
-              left: 245,
-              top: 45,
+              left: 490,
+              top: 90,
               display: "flex",
-              width: 190,
-              height: 412,
-              borderRadius: 30,
+              width: 380,
+              height: 824,
+              borderRadius: 60,
               background: "#1A1A1A",
-              padding: 3,
+              padding: 6,
               boxShadow:
-                "0 35px 80px rgba(0,0,0,0.8), 0 0 60px rgba(42,157,143,0.08), 0 0 0 1px rgba(255,255,255,0.08)",
+                "0 70px 160px rgba(0,0,0,0.8), 0 0 120px rgba(42,157,143,0.08), 0 0 0 2px rgba(255,255,255,0.08)",
               zIndex: 2,
             }}
           >
             <div
               style={{
                 display: "flex",
-                width: 184,
-                height: 406,
-                borderRadius: 27,
+                width: 368,
+                height: 812,
+                borderRadius: 54,
                 overflow: "hidden",
               }}
             >
               <img
                 src={`${SITE}/media/mobile-dashboard.png`}
-                width={184}
-                height={406}
+                width={368}
+                height={812}
                 style={{ objectFit: "cover" }}
               />
             </div>
@@ -183,32 +183,32 @@ export default async function Image() {
           <div
             style={{
               position: "absolute",
-              left: 400,
-              top: 95,
+              left: 730,
+              top: 200,
               display: "flex",
-              width: 160,
-              height: 346,
-              borderRadius: 26,
+              width: 320,
+              height: 692,
+              borderRadius: 52,
               background: "#1A1A1A",
-              padding: 3,
+              padding: 6,
               transform: "rotate(6deg)",
               boxShadow:
-                "0 25px 60px rgba(0,0,0,0.7), 0 0 0 1px rgba(255,255,255,0.06)",
+                "0 50px 120px rgba(0,0,0,0.7), 0 0 0 2px rgba(255,255,255,0.06)",
             }}
           >
             <div
               style={{
                 display: "flex",
-                width: 154,
-                height: 340,
-                borderRadius: 23,
+                width: 308,
+                height: 680,
+                borderRadius: 46,
                 overflow: "hidden",
               }}
             >
               <img
                 src={`${SITE}/media/mobile-ai.png`}
-                width={154}
-                height={340}
+                width={308}
+                height={680}
                 style={{ objectFit: "cover" }}
               />
             </div>
@@ -222,7 +222,7 @@ export default async function Image() {
             bottom: 0,
             left: 0,
             right: 0,
-            height: 3,
+            height: 6,
             background:
               "linear-gradient(90deg, transparent 10%, #2A9D8F 50%, transparent 90%)",
           }}
