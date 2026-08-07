@@ -75,28 +75,19 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Koqi | Performance Intelligence for Real Estate Agents",
+    title: "Koqi — The performance OS for real estate",
     description:
-      "Koqi quantifies agent skill, sharpens pricing accuracy, and gives brokerages real visibility into who is actually good. Free during beta.",
+      "Quantify your pricing skill. Build your ACCS score. The AI-powered operating system for real estate agents. Free during beta.",
     url: SITE_URL,
     siteName: "Koqi",
     type: "website",
     locale: "en_US",
-    images: [
-      {
-        url: "/Dashboard.png",
-        width: 1200,
-        height: 630,
-        alt: "Koqi performance intelligence dashboard showing ACCS score and agent analytics",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Koqi | Performance Intelligence for Real Estate",
+    title: "Koqi — The performance OS for real estate",
     description:
-      "Quantify your real estate skills. Sharpen your pricing instincts. Get better with every deal.",
-    images: ["/Dashboard.png"],
+      "Quantify your pricing skill. Build your ACCS score. The AI-powered operating system for real estate agents.",
     creator: "@koqiai",
   },
   icons: {
