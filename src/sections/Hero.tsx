@@ -76,6 +76,15 @@ export function Hero() {
         className="relative z-10 flex flex-col gap-6 p-8 md:p-20 md:pb-28"
         style={{ y: contentY, opacity: contentOpacity }}
       >
+        <motion.p
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.15, ease: headlineEase }}
+          className="text-xs font-medium uppercase tracking-[0.2em] text-white/50"
+        >
+          The performance OS for real estate
+        </motion.p>
+
         <div className="flex flex-col gap-0">
           {headlines.map((line, i) => (
             <motion.h1
@@ -98,11 +107,11 @@ export function Hero() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.9, ease: headlineEase }}
-          className="max-w-[480px] text-lg leading-relaxed text-white/90"
+          className="max-w-[520px] text-lg leading-relaxed text-white/90"
         >
-          Koqi is the performance platform for real estate.
-          Run comps that learn from your market. Score your pricing accuracy.
-          Get sharper with every deal.
+          Koqi is the AI-powered operating system for your real estate business.
+          A CMA engine that learns from every closing. A score that proves your
+          accuracy. An AI that knows your pipeline and does the work.
         </motion.p>
 
         <motion.div

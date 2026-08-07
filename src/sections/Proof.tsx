@@ -42,7 +42,7 @@ export function Proof() {
           className="flex flex-col justify-center px-6 py-24 md:py-32 md:pr-16 md:pl-12"
         >
           <p className="mb-10 text-xs font-medium uppercase tracking-[0.2em] text-muted">
-            Now in private beta
+            Now in public beta
           </p>
 
           <div className="space-y-12">

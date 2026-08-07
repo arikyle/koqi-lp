@@ -1,22 +1,30 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { IPhoneFrame } from "@/components/IPhoneFrame";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
 const callouts = [
   {
-    label: "Full CRM access",
-    desc: "Searches your contacts, deals, and notes",
+    label: "Does real work",
+    desc: "Drafts CMAs, pulls comps, summarizes your pipeline, preps listing appointments.",
   },
   {
-    label: "MLS-powered",
-    desc: "Pulls live listing data and property history",
+    label: "Grounded in your data",
+    desc: "Every answer draws on your actual CRM records and live MLS data, never a guess.",
   },
   {
-    label: "Permissioned",
-    desc: "Every data access is verified and authorized",
+    label: "Permissioned by design",
+    desc: "Every data access is verified, authorized, and logged.",
   },
+];
+
+const aiScreens = [
+  { src: "/media/screen-ai-listings.png", alt: "Koqi AI surfacing new listings with coaching angle" },
+  { src: "/media/screen-ai-analysis.png", alt: "Koqi AI market snapshot for 90403" },
+  { src: "/media/screen-ai-working.png", alt: "Koqi AI crunching market stats" },
+  { src: "/media/screen-ai-home.png", alt: "Koqi AI command center with ACCS score" },
 ];
 
 export function AICoach() {
@@ -31,18 +39,16 @@ export function AICoach() {
             transition={{ duration: 0.6, ease }}
           >
             <h2 className="font-display text-[28px] leading-snug text-ink sm:text-4xl md:text-[48px] md:leading-tight">
-              An AI that knows your book of business.
+              An AI that doesn&apos;t just answer. It does the work.
             </h2>
 
             <div className="mt-8 space-y-4 text-lg leading-relaxed text-ink/80">
               <p>
-                Koqi&apos;s AI coach reads your contacts, your deals, your listings,
-                and your market data. It answers like a senior agent who&apos;s
-                studied your pipeline.
-              </p>
-              <p>
-                &ldquo;Find properties for Sarah Chen&rdquo; returns interactive cards with
-                valuations, matched comps, and deal context.
+                Koqi AI has read your contacts, your deals, your listings, and
+                your market. Ask it a question and it answers like a senior agent
+                who studied your pipeline. Hand it a task and it drafts the CMA,
+                pulls the comps, and preps the appointment. You review everything
+                before it ships.
               </p>
             </div>
 
@@ -72,7 +78,7 @@ export function AICoach() {
                 href="https://form.typeform.com/to/d7BbovyW"
                 className="inline-block rounded-full bg-accent px-8 py-3.5 text-base font-medium text-white transition-opacity hover:opacity-90"
               >
-                Meet your AI coach
+                Meet Koqi AI
               </a>
             </motion.div>
           </motion.div>
@@ -84,37 +90,7 @@ export function AICoach() {
             transition={{ duration: 0.8, delay: 0.2, ease }}
             className="flex items-center justify-center"
           >
-            <div className="relative w-full max-w-[400px] overflow-hidden rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
-              <div className="flex items-center gap-2">
-                <div className="h-7 w-7 rounded-full bg-accent/10 flex items-center justify-center">
-                  <div className="h-3 w-3 rounded-full bg-accent" />
-                </div>
-                <span className="text-sm font-medium text-ink">Koqi AI</span>
-              </div>
-
-              <div className="mt-4 rounded-xl bg-stone-bg p-4">
-                <p className="text-sm text-muted">Find properties for Sarah Chen</p>
-              </div>
-
-              <div className="mt-4 space-y-3">
-                <div className="rounded-xl border border-stone-200 p-4">
-                  <p className="text-sm font-medium text-ink">742 Oak Ave, Pasadena</p>
-                  <p className="mt-1 text-xs text-muted">3 bd / 2 ba / 1,840 sqft</p>
-                  <div className="mt-3 flex items-center justify-between">
-                    <span className="text-sm font-medium text-accent">$1.24M estimated</span>
-                    <span className="rounded-full bg-accent/10 px-2 py-0.5 text-xs text-accent">High confidence</span>
-                  </div>
-                </div>
-                <div className="rounded-xl border border-stone-200 p-4">
-                  <p className="text-sm font-medium text-ink">1580 Maple Dr, Glendale</p>
-                  <p className="mt-1 text-xs text-muted">4 bd / 3 ba / 2,210 sqft</p>
-                  <div className="mt-3 flex items-center justify-between">
-                    <span className="text-sm font-medium text-accent">$1.58M estimated</span>
-                    <span className="rounded-full bg-yellow-500/10 px-2 py-0.5 text-xs text-yellow-600">Moderate</span>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <IPhoneFrame screens={aiScreens} />
           </motion.div>
         </div>
       </div>

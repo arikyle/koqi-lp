@@ -42,13 +42,8 @@ function WordReveal({
 }
 
 const paragraphs = [
-  "You’ve bought the CRM. You’ve paid for leads. You’ve sat through coaching calls that teach you to \"know your numbers.\"",
-  "None of it measures the one thing that wins listings and closes deals: how well you price property.",
-];
-
-const noneStatements = [
-  "Activity trackers count your calls.",
-  "Koqi measures your accuracy.",
+  "Activity trackers count your calls. Portals guess at your listings. Your CRM stores names.",
+  "None of it makes you sharper at the one skill sellers actually hire you for: pricing the home right. Koqi measures that skill, then compounds it.",
 ];
 
 export function Tension() {
@@ -62,9 +57,7 @@ export function Tension() {
           transition={{ duration: 0.8, ease }}
           className="font-display text-4xl leading-snug text-ink md:text-[56px] md:leading-tight"
         >
-          The industry gives agents more dashboards.
-          <br />
-          What agents need is better judgment.
+          The industry keeps handing agents more dashboards. What wins listings is better judgment.
         </motion.h2>
 
         <motion.div
@@ -79,12 +72,6 @@ export function Tension() {
           {paragraphs.map((text, i) => (
             <WordReveal key={i}>{text}</WordReveal>
           ))}
-
-          <div className="space-y-4 pt-4">
-            {noneStatements.map((text, i) => (
-              <WordReveal key={i}>{text}</WordReveal>
-            ))}
-          </div>
         </div>
 
       </div>

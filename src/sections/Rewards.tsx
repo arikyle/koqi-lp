@@ -21,23 +21,19 @@ export function Rewards() {
         className="relative max-w-[640px] text-center"
       >
         <h2 className="font-display text-[28px] leading-snug text-white sm:text-4xl md:text-[56px] md:leading-tight">
-          Sharpen your pricing instincts on every deal.
+          Deliberate practice, built into deals you already do.
         </h2>
         <p className="mt-2 text-xs text-white/30">Patented technology</p>
 
         <div className="mt-8 space-y-4 text-lg leading-relaxed text-white/60">
           <p>
-            Submit GPS-verified property estimates on real listings.
-            When the property closes, Koqi compares your estimate to the
-            actual sale price.
+            Submit GPS-verified estimates on real listings. When they close,
+            Koqi scores you against the actual sale price and shows you exactly
+            where your instincts drift high or low.
           </p>
           <p>
-            Every estimate builds your accuracy record. Once a listing goes
-            active, your estimate locks. No backdating. No adjusting after
-            you see the listing price.
-          </p>
-          <p className="text-white/80">
-            Deliberate practice built into the work you already do.
+            Ten estimates in, you&apos;ll know things about your own judgment
+            that twenty years in the business never told you.
           </p>
         </div>
 

@@ -31,16 +31,13 @@ export function ACCSScore() {
 
             <div className="mt-8 space-y-4 text-lg leading-relaxed text-ink/80">
               <p>
-                ACCS measures what no other platform touches: pricing accuracy,
-                confidence calibration, local expertise, property type mastery,
-                and consistency over time.
-              </p>
-              <p>
-                It decays when you stop contributing. It sharpens when you stay active.
-                It can&apos;t be bought, boosted, or gamed.
+                ACCS measures what actually makes a great agent: pricing accuracy,
+                confidence calibration, local expertise, property-type mastery,
+                and consistency over time. It&apos;s computed from verified outcomes,
+                updates as you work, and can&apos;t be bought.
               </p>
               <p className="font-medium text-ink">
-                Your ACCS is your proof.
+                Put it in your listing presentation and watch what it does in the room.
               </p>
             </div>
 

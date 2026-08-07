@@ -5,10 +5,10 @@ import { motion } from "framer-motion";
 const ease = [0.22, 1, 0.36, 1] as const;
 
 const steps = [
-  "Create your account and connect your MLS credentials",
-  "Run your first CMA on a property you know well",
-  "Submit a pricing estimate and watch your ACCS start building",
-  "Connect Follow Up Boss to sync your pipeline (optional)",
+  "Create your account and connect your MLS.",
+  "Run a CMA on a property you know well. Check the engine against your gut.",
+  "Submit an estimate. Your ACCS starts building the moment it closes.",
+  "Connect Follow Up Boss or Lofty and let the AI learn your pipeline. Optional, but this is where it gets fun.",
 ];
 
 export function HowItWorks() {
@@ -22,7 +22,7 @@ export function HowItWorks() {
           transition={{ duration: 0.6, ease }}
           className="font-display text-[28px] leading-snug text-white sm:text-4xl md:text-[48px] md:leading-tight"
         >
-          From sign-up to your first score in under ten minutes.
+          From download to your first score in under ten minutes.
         </motion.h2>
 
         <div className="mx-auto mt-16 max-w-md text-left">
@@ -52,7 +52,7 @@ export function HowItWorks() {
           transition={{ duration: 0.6, delay: 0.4, ease }}
           className="mt-12 text-base text-white/40"
         >
-          Everything is free during beta. Your score starts building on day one.
+          Everything is free during beta. Priced fairly when we launch.
         </motion.p>
       </div>
     </section>

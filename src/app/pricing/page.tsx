@@ -12,7 +12,9 @@ const included = [
   "ACCS scoring across all five dimensions",
   "Unlimited CMA reports with live market data",
   "AI coach with CRM and MLS access",
-  "Follow Up Boss integration",
+  "Follow Up Boss and Lofty integration",
+  "Prospecting database with seller scoring",
+  "AI-drafted campaigns with compliance built in",
   "GPS-verified pricing estimates",
   "ZIP-level territory intelligence",
 ];
@@ -20,7 +22,7 @@ const included = [
 const tiers = [
   {
     name: "Agents",
-    description: "Performance scoring, CMA tool, AI coaching, and GPS-verified pricing estimates for individual agents.",
+    description: "Performance scoring, CMA tool, AI coaching, prospecting, campaigns, and GPS-verified pricing estimates.",
     status: "Free during beta",
   },
   {
@@ -81,7 +83,7 @@ export default function PricingPage() {
               transition={{ duration: 0.6, delay: 0.2, ease }}
               className="mx-auto mt-8 max-w-xl text-lg leading-relaxed text-white/60"
             >
-              Everything is free during the private beta. No credit card.
+              Everything is free during the public beta. No credit card.
               No commitment. Your ACCS score starts building on day one,
               so early members get a head start.
             </motion.p>

@@ -213,7 +213,7 @@ export default async function BlogPostPage({ params }: Props) {
             Ready to build your ACCS score?
           </p>
           <p className="mt-2 text-sm text-muted">
-            Join the private beta and start quantifying your real estate skills.
+            Join the public beta and start quantifying your real estate skills.
           </p>
           <a
             href="https://koqi.ai/#"

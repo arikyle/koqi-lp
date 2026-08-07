@@ -34,25 +34,24 @@ export function Consumer() {
           </p>
 
           <h2 className="mt-6 font-display text-[28px] leading-snug text-ink sm:text-4xl md:text-[48px] md:leading-tight">
-            A clearer view of what this home is worth.
-            <br />
-            <span className="text-ink/60">And who should help you with it.</span>
+            What the home is worth, and who should help you. In that order.
           </h2>
 
           <div className="mt-8 max-w-[640px] space-y-4 text-lg leading-relaxed text-ink/80">
             <p>
-              Most real estate platforms sell your attention to agents
-              before you&apos;ve even decided what you want.
-            </p>
-            <p>
-              Koqi works differently. You see the valuation first: estimate,
-              range, and confidence level. Then you see agents matched to your
-              situation, with reasons why. No one paid to be there.
+              Most platforms sell your attention to agents before you&apos;ve
+              decided what you want. Koqi shows you the valuation first:
+              estimate, range, and confidence. Then it shows agents matched
+              to your situation, with the reasons why. No one paid to be there.
             </p>
             <p className="font-medium text-ink">
               You&apos;re served, not sold to.
             </p>
           </div>
+
+          <span className="mt-4 inline-block rounded-full border border-accent/40 px-3 py-1 text-xs font-medium uppercase tracking-[0.15em] text-accent">
+            Now in public beta
+          </span>
         </motion.div>
 
         <div className="mt-16 grid gap-10 md:grid-cols-3 md:gap-12">

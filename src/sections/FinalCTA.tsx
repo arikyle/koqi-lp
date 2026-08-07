@@ -51,8 +51,7 @@ export function FinalCTA() {
           transition={{ duration: 0.6, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
           className="relative mt-6 max-w-md text-center text-lg leading-relaxed text-white/60"
         >
-          Run your first CMA. Submit your first estimate.
-          See what your accuracy looks like.
+          Run a CMA. Your estimate scores automatically. See what your accuracy actually looks like.
         </motion.p>
 
         <motion.div
@@ -75,7 +74,7 @@ export function FinalCTA() {
           </MagneticButton>
 
           <p className="mt-2 text-sm text-white/40">
-            Free to download. Your score starts building on day one.
+            Free during beta. Your score starts building on day one.
           </p>
         </motion.div>
       </section>
@@ -89,7 +88,7 @@ export function FinalCTA() {
             <AppStoreBadgeLight />
           </div>
           <nav className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm text-muted">
-            <a href="/cma-tool" className="hover:text-accent transition-colors">CMA Tool</a>
+            <a href="/solutions" className="hover:text-accent transition-colors">Solutions</a>
             <a href="/brokerages" className="hover:text-accent transition-colors">Brokerages</a>
             <a href="/consumers" className="hover:text-accent transition-colors">Consumers</a>
             <a href="/blog" className="hover:text-accent transition-colors">Blog</a>

@@ -1,11 +1,12 @@
 import { Nav } from "@/components/Nav";
 import { Hero } from "@/sections/Hero";
 import { Tension } from "@/sections/Tension";
+import { Platform } from "@/sections/Platform";
 import { CMA } from "@/sections/CMA";
-import { ACCSScore } from "@/sections/ACCSScore";
-import { FollowUpBoss } from "@/sections/FollowUpBoss";
 import { AICoach } from "@/sections/AICoach";
+import { ACCSScore } from "@/sections/ACCSScore";
 import { Rewards } from "@/sections/Rewards";
+import { FollowUpBoss } from "@/sections/FollowUpBoss";
 import { Territory } from "@/sections/Territory";
 import { Brokerage } from "@/sections/Brokerage";
 import { Consumer } from "@/sections/Consumer";
@@ -21,11 +22,12 @@ export default function Home() {
       <main id="main">
         <Hero />
         <Tension />
+        <Platform />
         <CMA />
-        <ACCSScore />
-        <FollowUpBoss />
         <AICoach />
+        <ACCSScore />
         <Rewards />
+        <FollowUpBoss />
         <Territory />
         <Brokerage />
         <Consumer />

@@ -7,7 +7,7 @@ const navLinks = [
   { href: "/agents", label: "Agents" },
   { href: "/brokerages", label: "Brokerages" },
   { href: "/consumers", label: "Consumers" },
-  { href: "/cma-tool", label: "CMA Tool" },
+  { href: "/solutions", label: "Solutions" },
   { href: "/pricing", label: "Pricing" },
 ];
 

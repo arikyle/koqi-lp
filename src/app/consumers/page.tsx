@@ -11,22 +11,18 @@ const ease = [0.22, 1, 0.36, 1] as const;
 
 const problems = [
   {
-    icon: "★",
     title: "Online reviews can be bought",
     body: "5-star reviews are a marketing channel, not a quality signal. Agents with 200 reviews aren't necessarily better. They just asked more often.",
   },
   {
-    icon: "📊",
     title: "Transaction count measures volume, not skill",
     body: "A busy agent isn't a skilled agent. An agent who closes 40 deals a year but misprices half of them costs their clients real money.",
   },
   {
-    icon: "💰",
     title: "\"Top Producer\" is a spending badge",
-    body: "Most \"Top Producer\" awards are based on GCI (gross commission income). That tells you what the agent earned. It says nothing about how well they served their clients.",
+    body: "Most \"Top Producer\" awards are based on gross commission income. That tells you what the agent earned. It says nothing about how well they served their clients.",
   },
   {
-    icon: "📢",
     title: "Zillow features are paid placement",
     body: "The agent at the top of your Zillow search didn't get there by being the best. They got there by paying the most. That's advertising, not meritocracy.",
   },
@@ -35,15 +31,15 @@ const problems = [
 const accsExplainer = [
   {
     title: "Pricing Accuracy",
-    body: "Can this agent accurately estimate what your home will sell for? This is the single most valuable skill. And now it's measured.",
+    body: "Can this agent accurately estimate what your home will sell for? This is the single most valuable skill in real estate. And now it's measured.",
   },
   {
     title: "Confidence Calibration",
-    body: "When they say \"I'm confident this will sell for $850K,\" are they right? Calibrated agents give you honest, reliable guidance.",
+    body: "When they say \"I'm confident this will sell for $850K,\" are they right? Calibrated agents give you honest, reliable guidance. Not wishful thinking.",
   },
   {
     title: "Local Specialization",
-    body: "An agent who's proven in YOUR neighborhood, not just your city. ZIP-level accuracy data reveals genuine local expertise.",
+    body: "An agent who's proven in your neighborhood, not just your city. ZIP-level accuracy data reveals genuine local expertise that years of experience alone can't guarantee.",
   },
   {
     title: "Track Record",
@@ -107,11 +103,12 @@ export default function ConsumersPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3, ease }}
-              className="mx-auto mt-8 max-w-xl text-lg leading-relaxed text-white/60"
+              className="mx-auto mt-8 max-w-2xl text-lg leading-relaxed text-white/60"
             >
-              The agent at the top of your Zillow search paid to be there. Koqi
-              shows you who&apos;s actually good, with verified pricing accuracy
-              data that no amount of marketing spend can fake.
+              The agent at the top of your Zillow search paid to be there.
+              Koqi matches you with agents who are proven in your
+              neighborhood, using verified accuracy data that no amount
+              of marketing spend can fake.
             </motion.p>
 
             <motion.div
@@ -127,7 +124,7 @@ export default function ConsumersPage() {
                 </span>
               </MagneticButton>
               <p className="text-sm text-white/40">
-                Be first to access agent scores in your market
+                Be first to get matched with proven agents in your market
               </p>
             </motion.div>
           </motion.div>
@@ -158,10 +155,7 @@ export default function ConsumersPage() {
                   transition={{ duration: 0.6, delay: i * 0.1, ease }}
                   className="rounded-2xl border border-stone-200 bg-white p-8"
                 >
-                  <span className="text-2xl" aria-hidden="true">
-                    {item.icon}
-                  </span>
-                  <h3 className="mt-4 font-display text-xl text-ink">
+                  <h3 className="font-display text-xl text-ink">
                     {item.title}
                   </h3>
                   <p className="mt-3 text-base leading-relaxed text-muted">
@@ -204,9 +198,9 @@ export default function ConsumersPage() {
                   transition={{ duration: 0.6, delay: 0.1, ease }}
                   className="mt-4 font-display text-[28px] leading-snug text-white sm:text-4xl"
                 >
-                  The first objective measure of
+                  The data behind
                   <br />
-                  real estate agent quality.
+                  every match.
                 </motion.h2>
                 <motion.p
                   initial={{ opacity: 0, y: 20 }}
@@ -217,7 +211,11 @@ export default function ConsumersPage() {
                 >
                   ACCS (Agent Competency &amp; Calibration Score) measures what
                   actually matters when you&apos;re hiring someone to price the
-                  biggest transaction of your life.
+                  biggest transaction of your life. Koqi uses this data to
+                  match you with agents who have genuine expertise where you
+                  live. Not who paid the most. Not who asked for the most
+                  reviews. Who actually prices homes accurately in your
+                  specific neighborhood.
                 </motion.p>
               </div>
             </div>
@@ -267,8 +265,8 @@ export default function ConsumersPage() {
             >
               That&apos;s how real estate works today. The agents you see first
               aren&apos;t the best. They&apos;re the ones who spent the most
-              on advertising. Koqi changes that by making skill visible and
-              verifiable.
+              on advertising. Koqi changes that by matching you with agents
+              based on verified performance data, not ad spend.
             </motion.p>
           </div>
         </section>
@@ -290,18 +288,18 @@ export default function ConsumersPage() {
               {[
                 {
                   step: "1",
-                  title: "Enter your ZIP code",
-                  body: "See agents ranked by verified ACCS score in your specific neighborhood, not your metro area.",
+                  title: "Tell us about your home",
+                  body: "Enter your address, property type, and what you need. Koqi uses this to find agents with proven accuracy for homes like yours.",
                 },
                 {
                   step: "2",
-                  title: "Compare real performance data",
-                  body: "Pricing accuracy percentages. Confidence calibration. Property type expertise. Data that reviews and testimonials can never provide.",
+                  title: "Get matched with proven agents",
+                  body: "Koqi surfaces agents with verified pricing expertise in your specific neighborhood. No ads. No pay-to-play. Just data.",
                 },
                 {
                   step: "3",
-                  title: "Choose with confidence",
-                  body: "When you hire an agent with a 92 ACCS in your ZIP code, you know their pricing instincts are proven, not self-reported.",
+                  title: "Connect with confidence",
+                  body: "Every matched agent's expertise is backed by real performance data. You're not guessing. You're choosing from a shortlist already vetted by the numbers.",
                 },
               ].map((item, i) => (
                 <motion.div
@@ -339,9 +337,9 @@ export default function ConsumersPage() {
               transition={{ duration: 0.8, ease }}
               className="font-display text-[28px] leading-snug text-ink sm:text-4xl md:text-[56px] md:leading-tight"
             >
-              The best agents want you to see their score.
+              The best agents have already proven it.
               <br />
-              <span className="text-muted">The rest are hoping you don&apos;t.</span>
+              <span className="text-muted">Now you get matched with them.</span>
             </motion.h2>
 
             <motion.div
@@ -358,7 +356,7 @@ export default function ConsumersPage() {
                 </span>
               </MagneticButton>
               <p className="mt-4 text-sm text-muted">
-                Be first to access agent scores when we launch in your market
+                Be first to get matched with proven agents in your market
               </p>
             </motion.div>
           </div>

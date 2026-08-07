@@ -14,15 +14,19 @@ const ease = [0.22, 1, 0.36, 1] as const;
 const columns = [
   {
     title: "Recruiting edge",
-    body: "Show recruits exactly how your brokerage develops talent. ACCS trends, accuracy improvement curves, and CMA volume tell a story no competing offer letter can match.",
+    body: "Show recruits how your brokerage develops talent. ACCS trends and accuracy curves tell a story no competing offer letter can match.",
   },
   {
     title: "Coaching signals",
-    body: "Spot which agents are slipping before they lose a listing. ACCS decay, estimate accuracy trends, and activity gaps surface coaching opportunities while there's still time to act.",
+    body: "Spot the agent who's slipping before they lose a listing. Accuracy decay and activity gaps surface coaching moments while there's still time to act.",
+  },
+  {
+    title: "Your brand on every report",
+    body: "Brokerage brand kits put your identity on every CMA your agents send. Shared templates keep the whole roster on message.",
   },
   {
     title: "Team performance",
-    body: "Track ACCS across your entire roster. Compare teams. Identify your pricing specialists vs. your relationship builders. Build around strengths instead of guessing at weaknesses.",
+    body: "Track ACCS across the roster. Find your pricing specialists and your relationship builders, and build around strengths instead of guessing.",
   },
 ];
 
@@ -80,21 +84,16 @@ export function Brokerage() {
             Recruit on proof. Coach on data. Retain on growth.
           </h2>
 
-          <div className="mt-8 space-y-4 text-lg leading-relaxed text-white/75">
-            <p>
-              The best agents don&apos;t need another pep talk. They need a brokerage
-              that sees their work clearly and measures it objectively.
-            </p>
-            <p className="text-white">
-              Koqi gives you the scoreboard your recruiting pitch has been missing.
-            </p>
-          </div>
+          <p className="mt-6 text-lg leading-relaxed text-white/60">
+            Your best agents don&apos;t need another pep talk. They need a brokerage
+            that sees their work clearly and measures it honestly.
+          </p>
         </motion.div>
       </div>
 
       <div className="bg-[#0A0A0A] px-6 py-24 md:py-32">
         <div className="mx-auto max-w-5xl">
-          <div className="grid gap-10 md:grid-cols-3 md:gap-12">
+          <div className="grid gap-10 sm:grid-cols-2 md:gap-12 lg:grid-cols-4">
             {columns.map((col, i) => (
               <motion.div
                 key={i}

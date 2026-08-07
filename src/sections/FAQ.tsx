@@ -7,7 +7,7 @@ const faqs = [
   {
     question: "What is Koqi and how does it work?",
     answer:
-      "Koqi is a performance intelligence platform for real estate agents and brokerages. It measures pricing accuracy, market knowledge, and confidence calibration, then distills them into one score called ACCS. CRM dashboards track activity. Koqi tracks ability.",
+      "Koqi is the AI-powered operating system for real estate. Your CRM stores your business. Koqi runs it. It measures pricing accuracy, market knowledge, and confidence calibration, distills them into one score called ACCS, and connects everything through an AI that works across your pipeline, your estimates, and live MLS data.",
   },
   {
     question: "What is the ACCS score?",
@@ -20,14 +20,19 @@ const faqs = [
       "Koqi's CMA (Comparative Market Analysis) walks you through property valuation step by step: subject property lookup, comp selection, adjustments, risk assessment, and pricing scenarios. It uses live market data, scores comps by relevance, and feeds each CMA into your ACCS accuracy record. You get more precise each time you use it.",
   },
   {
-    question: "Does Koqi integrate with my CRM?",
+    question: "Which CRMs does Koqi integrate with?",
     answer:
-      "Koqi integrates with Follow Up Boss. Contacts, deals, notes, and call logs sync automatically. When you run a CMA, Koqi matches the client to your existing contacts and links or creates deals automatically. Your API key is encrypted at rest and sync logs show exactly what moved. More integrations are coming.",
+      "Koqi integrates with Follow Up Boss and Lofty. Contacts, deals, notes, and call logs sync automatically. When you run a CMA, Koqi matches the client to your existing contacts and links or creates deals on the fly. More integrations are coming.",
   },
   {
-    question: "What does the AI coach do?",
+    question: "Can I put my own branding on CMA reports?",
     answer:
-      "Koqi's AI coach has permissioned access to your contacts, deals, and MLS data. Ask it to find properties for a client, analyze a deal, or surface follow-up opportunities. It responds with interactive cards showing valuations and context. All data access is verified and authorized.",
+      "Yes. Individual agents can apply their own branding to every CMA report. Brokerages get brand kits that put their identity on every report their agents send, plus shared templates to keep the whole roster on message. Reports can be shared as a live link or exported as a polished PDF.",
+  },
+  {
+    question: "What does Koqi AI do?",
+    answer:
+      "Koqi AI has permissioned access to your contacts, deals, and MLS data. It drafts CMAs, pulls comps, summarizes your pipeline, and preps listing appointments. Every answer draws on your actual CRM records and live MLS data. You review everything before it ships. All data access is verified, authorized, and logged.",
   },
   {
     question: "How do pricing estimates work?",
@@ -37,7 +42,7 @@ const faqs = [
   {
     question: "Is Koqi free to use?",
     answer:
-      "Koqi is completely free during the private beta. Your ACCS score starts building from day one, so early access members get a head start on establishing their performance profile. Post-launch pricing will be role-based, with separate tiers for individual agents, brokerages, and consumers.",
+      "Koqi is completely free during the public beta. Your ACCS score starts building from day one, so early access members get a head start on establishing their performance profile. Post-launch pricing will be role-based, with separate tiers for individual agents, brokerages, and consumers.",
   },
   {
     question: "How does Koqi help brokerages?",
@@ -57,7 +62,7 @@ const faqs = [
   {
     question: "How is Koqi different from a real estate CRM?",
     answer:
-      "CRMs track activity: calls made, emails sent, appointments booked. Koqi measures skill. Your ACCS score is an objective, verifiable measure of your pricing instincts and market expertise. No CRM captures that.",
+      "A CRM stores your business: calls made, emails sent, appointments booked. Koqi runs it. Your ACCS score is an objective, verifiable measure of your pricing instincts and market expertise. The AI works across your CRM data, your estimates, and live MLS data in one place. No CRM does that.",
   },
   {
     question: "Can I use my ACCS score for recruiting or marketing?",

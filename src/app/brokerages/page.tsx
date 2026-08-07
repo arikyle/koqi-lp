@@ -35,7 +35,7 @@ const metrics = [
   { value: "5", label: "ACCS dimensions tracked per agent" },
   { value: "ZIP", label: "Level performance data" },
   { value: "30d", label: "Rolling score, always current form" },
-  { value: "∞", label: "Historical trend data" },
+  { value: "AI", label: "Coaching insights per agent" },
 ];
 
 export default function BrokeragesPage() {
@@ -94,12 +94,13 @@ export default function BrokeragesPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3, ease }}
-              className="mx-auto mt-8 max-w-xl text-lg leading-relaxed text-white/60"
+              className="mx-auto mt-8 max-w-2xl text-lg leading-relaxed text-white/60"
             >
-              Koqi gives brokerages real-time visibility into agent skill,
-              not just activity. Track ACCS scores across your team. Spot
-              coaching opportunities before they become attrition. Build a
-              recruiting advantage your competitors can&apos;t replicate.
+              Your CRM tells you who closed. Your P&amp;L tells you who
+              earned. Neither tells you who prices well, who&apos;s
+              improving, or who&apos;s about to plateau. Koqi gives you
+              AI-powered visibility into the skill that actually drives
+              long-term production: pricing accuracy.
             </motion.p>
 
             <motion.div
@@ -117,7 +118,7 @@ export default function BrokeragesPage() {
           </motion.div>
         </section>
 
-        {/* Pain → Solution */}
+        {/* Pain/Solution */}
         <section className="bg-stone-bg px-6 py-24 md:py-32">
           <div className="mx-auto max-w-4xl">
             <motion.p
@@ -184,8 +185,52 @@ export default function BrokeragesPage() {
           </div>
         </section>
 
-        {/* Brokerage Tools - Phones */}
+        {/* AI advantage */}
         <section className="bg-stone-bg px-6 py-24 md:py-32">
+          <div className="mx-auto max-w-3xl">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-10%" }}
+              transition={{ duration: 0.8, ease }}
+            >
+              <p className="text-xs font-medium uppercase tracking-[0.2em] text-muted">
+                The AI advantage
+              </p>
+              <h2 className="mt-4 font-display text-[28px] leading-snug text-ink sm:text-4xl md:text-[44px] md:leading-snug">
+                Give every agent on your team their own AI coach.
+              </h2>
+              <div className="mt-8 space-y-5 text-lg leading-relaxed text-muted">
+                <p>
+                  Koqi&apos;s AI doesn&apos;t just track performance. It
+                  analyzes each agent&apos;s pricing patterns and delivers
+                  coaching that&apos;s specific to their blind spots. An
+                  agent who overprices condos in coastal ZIPs gets different
+                  feedback than one who underprices single-family homes
+                  inland. The coaching is automatic, continuous, and based
+                  on real data.
+                </p>
+                <p>
+                  Your managers don&apos;t need to guess where to focus.
+                  The AI surfaces the agents who are improving, the ones
+                  who are slipping, and the specific skills each one needs
+                  to work on. Coaching becomes a conversation about data,
+                  not intuition.
+                </p>
+                <p>
+                  Equip every agent with prospecting tools and a campaign
+                  system backed by real data. They import property owner
+                  lists, the AI scores seller opportunities, and outreach
+                  goes out with verified market intelligence. Your team
+                  reaches the right sellers with the right message.
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Brokerage Tools - Phones */}
+        <section className="bg-[#0A0A0A] px-6 py-24 md:py-32">
           <div className="mx-auto max-w-5xl">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -194,10 +239,10 @@ export default function BrokeragesPage() {
               transition={{ duration: 0.6, ease }}
               className="mb-16 text-center md:mb-24"
             >
-              <p className="text-xs font-medium uppercase tracking-[0.2em] text-muted">
+              <p className="text-xs font-medium uppercase tracking-[0.2em] text-white/40">
                 Brokerage dashboard
               </p>
-              <h2 className="mt-4 font-display text-[28px] text-ink sm:text-4xl">
+              <h2 className="mt-4 font-display text-[28px] text-white sm:text-4xl">
                 See every agent. Know who&apos;s growing.
               </h2>
             </motion.div>
@@ -230,7 +275,7 @@ export default function BrokeragesPage() {
                   className="flex flex-col items-center"
                 >
                   <IPhoneFrame screens={group.screens} interval={group.interval} />
-                  <p className="mt-6 text-center text-sm font-medium text-ink">
+                  <p className="mt-6 text-center text-sm font-medium text-white/70">
                     {group.label}
                   </p>
                 </motion.div>
@@ -240,14 +285,14 @@ export default function BrokeragesPage() {
         </section>
 
         {/* Use Cases */}
-        <section className="bg-[#0A0A0A] px-6 py-24 md:py-32">
+        <section className="bg-stone-bg px-6 py-24 md:py-32">
           <div className="mx-auto max-w-4xl">
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-10%" }}
               transition={{ duration: 0.6, ease }}
-              className="text-center font-display text-[28px] text-white sm:text-4xl"
+              className="text-center font-display text-[28px] text-ink sm:text-4xl"
             >
               Three things that change immediately.
             </motion.h2>
@@ -277,7 +322,7 @@ export default function BrokeragesPage() {
                   <h3 className="font-display text-xl text-accent">
                     {item.title}
                   </h3>
-                  <p className="mt-4 text-base leading-relaxed text-white/55">
+                  <p className="mt-4 text-base leading-relaxed text-muted">
                     {item.body}
                   </p>
                 </motion.div>
@@ -287,14 +332,14 @@ export default function BrokeragesPage() {
         </section>
 
         {/* CTA */}
-        <section className="bg-stone-bg px-6 py-24 md:py-32">
+        <section className="bg-[#0A0A0A] px-6 py-24 md:py-32">
           <div className="mx-auto max-w-3xl text-center">
             <motion.h2
               initial={{ opacity: 0, scale: 0.85 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, margin: "-10%" }}
               transition={{ duration: 0.8, ease }}
-              className="font-display text-[28px] leading-snug text-ink sm:text-4xl md:text-[56px] md:leading-tight"
+              className="font-display text-[28px] leading-snug text-white sm:text-4xl md:text-[56px] md:leading-tight"
             >
               The brokerages that measure what matters
               <br />
@@ -314,7 +359,7 @@ export default function BrokeragesPage() {
                   <span className="absolute inset-0 bg-white/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                 </span>
               </MagneticButton>
-              <p className="mt-4 text-sm text-muted">
+              <p className="mt-4 text-sm text-white/40">
                 See your team&apos;s performance in a live walkthrough
               </p>
             </motion.div>
@@ -322,15 +367,15 @@ export default function BrokeragesPage() {
         </section>
 
         {/* Footer */}
-        <footer className="border-t border-stone-200 bg-stone-bg px-6 py-12">
+        <footer className="border-t border-white/10 bg-[#0A0A0A] px-6 py-12">
           <div className="mx-auto flex max-w-4xl flex-col items-center gap-4 text-center">
             <div className="flex items-center gap-6">
-              <Link href="/" className="text-sm font-medium text-ink hover:text-accent transition-colors">koqi.ai</Link>
-              <Link href="/agents" className="text-sm text-muted hover:text-accent transition-colors">Agents</Link>
+              <Link href="/" className="text-sm font-medium text-white/70 hover:text-accent transition-colors">koqi.ai</Link>
+              <Link href="/agents" className="text-sm text-white/40 hover:text-accent transition-colors">Agents</Link>
               <Link href="/brokerages" className="text-sm text-accent transition-colors">Brokerages</Link>
-              <Link href="/consumers" className="text-sm text-muted hover:text-accent transition-colors">Consumers</Link>
+              <Link href="/consumers" className="text-sm text-white/40 hover:text-accent transition-colors">Consumers</Link>
             </div>
-            <p className="text-xs text-muted/60">&copy; {new Date().getFullYear()} Koqi. All rights reserved.</p>
+            <p className="text-xs text-white/30">&copy; {new Date().getFullYear()} Koqi. All rights reserved.</p>
           </div>
         </footer>
       </main>
