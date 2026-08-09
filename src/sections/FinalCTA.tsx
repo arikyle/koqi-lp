@@ -93,8 +93,8 @@ export function FinalCTA() {
             <a href="/consumers" className="hover:text-accent transition-colors">Consumers</a>
             <a href="/blog" className="hover:text-accent transition-colors">Blog</a>
             <a href="#faq" className="hover:text-accent transition-colors">FAQ</a>
-            <a href="/privacy-policy" className="hover:text-accent transition-colors">Privacy</a>
-            <a href="/terms-of-use" className="hover:text-accent transition-colors">Terms</a>
+            <a href="https://app.koqi.ai/privacy" className="hover:text-accent transition-colors">Privacy</a>
+            <a href="https://app.koqi.ai/terms" className="hover:text-accent transition-colors">Terms</a>
             <a href="mailto:hello@koqi.ai" className="hover:text-accent transition-colors">hello@koqi.ai</a>
           </nav>
           <p className="mt-6 text-center text-xs text-muted/60">
